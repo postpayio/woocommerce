@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards">
+    <file>.</file>
+    <exclude-pattern type="relative">vendor/*</exclude-pattern>
+    <arg value="ps"/>
+
+    <rule ref="WooCommerce-Core">
+        <exclude name="Squiz.Commenting.FileComment.MissingPackageTag"/>
+        <exclude name="WordPress.Security.NonceVerification.Recommended"/>
+    </rule>
+
+    <rule ref="WordPress.Files.FileName.InvalidClassFileName">
+        <exclude-pattern>postpay.php</exclude-pattern>
+    </rule>
+
+    <rule ref="WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode">
+        <exclude-pattern>includes/http/class-wc-postpay-client.php</exclude-pattern>
+    </rule>
+
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array" value="postpay"/>
+        </properties>
+    </rule>
+</ruleset>

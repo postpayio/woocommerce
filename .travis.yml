@@ -1,0 +1,16 @@
+---
+language: php
+
+sudo: false
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+  - 7.4snapshot
+
+install:
+    - travis_retry composer install -n --prefer-dist
+
+script:
+    - composer run-script phpcs

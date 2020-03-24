@@ -1,0 +1,48 @@
+{
+    "name": "postpay/woocommerce",
+    "description": "Postpay Payment Gateway for WooCommerce",
+    "type": "woocommerce-plugin",
+    "license": "GPLv3",
+    "version": "0.0.1",
+    "homepage": "https://github.com/postpayio/woocommerce",
+    "keywords": ["wordpress", "woocommerce", "payment", "gateway", "postpay"],
+    "authors": [
+        {
+            "email": "dani@postpay.io",
+            "name": "mongkok"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/postpay.io/woocommerce",
+        "issues": "https://github.com/postpay.io/woocommerce/issues"
+    },
+    "require": {
+        "php": ">=5.6|>=7.0",
+        "composer/installers": "~1.0",
+        "postpay/postpay-php": "~0.0.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~3.5.3",
+        "woocommerce/woocommerce-sniffs": "*",
+        "wp-cli/i18n-command": "^2.2"
+    },
+    "scripts": {
+        "phpcs": [
+            "phpcs -s -p"
+        ],
+        "phpcbf": [
+            "phpcbf -p"
+        ],
+        "makepot-audit": [
+            "wp i18n make-pot . --slug=postpay"
+        ],
+        "makepot": [
+            "@makepot-audit --skip-audit"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "{$name}/": ["type:wordpress-plugin"]
+        }
+    }
+}

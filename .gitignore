@@ -1,0 +1,17 @@
+*.*~
+*.db
+*.DS_Store
+*.box
+*.cer
+*.egg*
+*.log
+*.pem
+*.p12
+*.pyc
+*.sql
+*.xls
+
+.php_cs.cache
+dist.sh
+composer.lock
+vendor/
