@@ -63,12 +63,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	 * Builds our payment fields area.
 	 */
 	public function payment_fields() {
-		wc_get_postpay_template(
-			'payment-fields.php',
-			array(
-				'gateway' => $this,
-			)
-		);
+		wc_get_postpay_template( 'payment-fields.php', array( 'gateway' => $this ) );
 	}
 
 	/**
@@ -196,9 +191,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 		if ( is_checkout() && ! empty( $_GET[ $this->token_param ] ) ) {
 			wc_postpay_script(
 				'wc-postpay-checkout',
-				array(
-					'token' => wc_clean( wp_unslash( $_GET[ $this->token_param ] ) ),
-				)
+				array( 'token' => wc_clean( wp_unslash( $_GET[ $this->token_param ] ) ) )
 			);
 		}
 	}

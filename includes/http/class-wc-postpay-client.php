@@ -25,24 +25,29 @@ class WC_Postpay_Client implements ClientInterface {
 	 * @throws PostpayException If response status code is invalid.
 	 */
 	public function send( $request, $timeout = null ) {
-		$headers                  = $request->getHeaders();
-		$headers['Authorization'] = 'Basic ' . base64_encode(
-			implode( ':', $request->getAuth() )
-		);
-		$options                  = array(
+		$options = array(
 			'method'  => $request->getMethod(),
-			'headers' => $headers,
+			'headers' => array_merge(
+				array(
+					'Authorization' => 'Basic ' . base64_encode(
+						implode( ':', $request->getAuth() )
+					),
+				),
+				$request->getHeaders()
+			),
 			'body'    => wp_json_encode( $request->json() ),
 			'timeout' => $timeout,
 		);
-		$response                 = wp_remote_request( $request->getUrl(), $options );
+
+		$response = wp_remote_request( $request->getUrl(), $options );
 
 		if ( is_wp_error( $response ) ) {
 			throw new PostpayException(
 				$response->get_error_message(),
-				$response->get_error_code(),
+				$response->get_error_code()
 			);
 		}
+
 		return new Response(
 			$request,
 			wp_remote_retrieve_response_code( $response ),
