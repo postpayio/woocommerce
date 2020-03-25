@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-03-25T03:33:01+00:00\n"
-"PO-Revision-Date: 2020-03-25 11:09+0700\n"
+"PO-Revision-Date: 2020-03-25 11:40+0700\n"
 "X-Generator: Poedit 2.3\n"
 "X-Domain: postpay\n"
 "Last-Translator: \n"
@@ -29,7 +29,7 @@ msgstr ""
 #. Description of the plugin
 #: includes/class-wc-postpay-gateway.php:29 includes/wc-postpay-settings.php:27
 msgid "Buy now and pay later with zero interest and zero fees."
-msgstr ""
+msgstr "Compra ahora y paga más tarde con cero interés y sin cargos."
 
 #. Author URI of the plugin
 msgid "https://postpay.io"
