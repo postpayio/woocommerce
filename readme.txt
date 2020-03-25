@@ -1,4 +1,4 @@
-=== Postpay ===
+=== WooCommerce Postpay Payment Gateway ===
 Contributors: mongkok
 Requires at least: 4.4
 Tested up to: 5.3.2

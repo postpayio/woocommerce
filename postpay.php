@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Postpay
+ * Plugin Name: WooCommerce Postpay Payment Gateway
  * Version: 0.1.0
  * Plugin URI: https://github.com/postpayio/woocommerce
  * Description: Buy now and pay later with zero interest and zero fees.
