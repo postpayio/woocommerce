@@ -37,7 +37,7 @@ class WC_Postpay_Adapter {
 
 		require_once WC_POSTPAY_DIR_PATH . 'includes/http/class-wc-postpay-client.php';
 
-		$this->client = new \Postpay\Postpay(
+		$this->client = new Postpay(
 			array(
 				'sandbox'        => $gateway->sandbox,
 				'merchant_id'    => $gateway->get_option( 'merchant_id' ),
