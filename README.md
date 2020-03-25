@@ -4,7 +4,7 @@
 
 # Postpay for WooCommerce
 
-Postpay Payment Gateway for WooCommerce.
+[Postpay](https://postpay.io) Payment Gateway for WooCommerce.
 
 ## Installation
 
@@ -12,9 +12,9 @@ Please note, this payment gateway requires WooCommerce 3.0 and above.
 
 ### Automatic
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don’t need to leave your web browser. To do an automatic install of the WooCommerce Postpay plugin, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don’t need to leave your web browser. To do an automatic install of the WooCommerce Postpay plugin, log in to your WordPress dashboard, navigate to the Plugins menu and click *Add New*.
 
-In the search field type "Postpay" and click Search Plugins. Once you’ve found our plugin you can install it by simply clicking "Install Now", then "Activate".
+In the search field type "Postpay" and click Search Plugins. Once you’ve found our plugin you can install it by simply clicking *Install Now*, then *Activate*.
 
 ### Manual
 
