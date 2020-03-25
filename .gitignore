@@ -12,6 +12,7 @@
 *.xls
 
 .php_cs.cache
-dist.sh
+.dist
 composer.lock
+svn/
 vendor/
