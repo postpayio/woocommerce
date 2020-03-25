@@ -12,12 +12,12 @@ return array(
 		'version' => WC_POSTPAY_VERSION,
 	),
 	'wc-postpay-init'     => array(
-		'src'     => plugin_dir_url( WC_POSTPAY_FILE ) . 'assets/js/postpay.js',
+		'src'     => WC_POSTPAY_DIR_URL . 'assets/js/postpay.js',
 		'deps'    => array( 'wc-postpay-js', 'jquery' ),
 		'version' => WC_POSTPAY_VERSION,
 	),
 	'wc-postpay-checkout' => array(
-		'src'     => plugin_dir_url( WC_POSTPAY_FILE ) . 'assets/js/checkout.js',
+		'src'     => WC_POSTPAY_DIR_URL . 'assets/js/checkout.js',
 		'deps'    => array( 'wc-postpay-init' ),
 		'version' => WC_POSTPAY_VERSION,
 	),

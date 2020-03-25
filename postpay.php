@@ -57,6 +57,7 @@ class WC_Postpay {
 
 		define( 'WC_POSTPAY_FILE', __FILE__ );
 		define( 'WC_POSTPAY_DIR_PATH', plugin_dir_path( __FILE__ ) );
+		define( 'WC_POSTPAY_DIR_URL', plugin_dir_url( __FILE__ ) );
 		define( 'WC_POSTPAY_VERSION', $plugin_data['Version'] );
 
 		$this->settings = get_option( 'woocommerce_' . self::PAYMENT_GATEWAY_ID . '_settings' );
