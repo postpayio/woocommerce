@@ -63,6 +63,13 @@ Postpay offers an interest-free and fees-free alternative to traditional credit 
 
 We agree that your security is of utmost importance. We are a PCI DSS compliant company which means that we undergo strict compliance tests from the the Payment Card Industry (PCI) to ensure that your data is safely stored in our systems. Please visit our PCI DSS page to learn more https://postpay.io/pci-dss.
 
+== Screenshots ==
+
+1. Buy now and pay later with zero interest and zero fees.
+2. Select Pospat payment method.
+3. Checkout with Postpay.
+4. Instalment plan approved.
+
 == Changelog ==
 
 = 0.1.0 - 2020-03-25 =
