@@ -40,7 +40,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 		$this->in_context  = 'yes' === $this->get_option( 'in_context', 'no' );
 		$this->debug       = 'yes' === $this->get_option( 'debug', 'no' );
 
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/class-wc-postpay-api.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/class-wc-postpay-api.php';
 
 		new WC_Postpay_Api( $this->id );
 		$this->adapter = new WC_Postpay_Adapter( $this );

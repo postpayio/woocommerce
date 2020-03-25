@@ -19,13 +19,13 @@ class WC_Postpay_Request_Checkout {
 	 */
 	public static function build( $order_id ) {
 
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/request/class-wc-postpay-request-address.php';
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/request/class-wc-postpay-request-coupon.php';
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/request/class-wc-postpay-request-customer.php';
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/request/class-wc-postpay-request-guest.php';
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/request/class-wc-postpay-request-item.php';
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/request/class-wc-postpay-request-metadata.php';
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/request/class-wc-postpay-request-shipping.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-address.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-coupon.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-customer.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-guest.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-item.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-metadata.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-shipping.php';
 
 		$order = wc_get_order( $order_id );
 

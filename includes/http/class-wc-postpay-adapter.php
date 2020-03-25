@@ -35,7 +35,7 @@ class WC_Postpay_Adapter {
 	public function __construct( $gateway ) {
 		$this->gateway = $gateway;
 
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/http/class-wc-postpay-client.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/http/class-wc-postpay-client.php';
 
 		$this->client = new \Postpay\Postpay(
 			array(
@@ -102,7 +102,7 @@ class WC_Postpay_Adapter {
 	 * @throws ApiException If response status code is invalid.
 	 */
 	public function checkout( $order_id ) {
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/request/class-wc-postpay-request-checkout.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-checkout.php';
 		return $this->post( '/checkouts', WC_Postpay_Request_Checkout::build( $order_id ) );
 	}
 

@@ -29,6 +29,5 @@ function wc_postpay_script( $handle, $params = null ) {
  * @param string $template_path Template path. (default: '').
  */
 function wc_get_postpay_template( $template_name, $args = array(), $template_path = '' ) {
-	$default_path = plugin_dir_path( WC_POSTPAY_FILE ) . 'templates/';
-	wc_get_template( $template_name, $args, $template_path, $default_path );
+	wc_get_template( $template_name, $args, $template_path, WC_POSTPAY_DIR_PATH . 'templates/' );
 }

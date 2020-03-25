@@ -56,17 +56,18 @@ class WC_Postpay {
 		$plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ), false );
 
 		define( 'WC_POSTPAY_FILE', __FILE__ );
+		define( 'WC_POSTPAY_DIR_PATH', plugin_dir_path( __FILE__ ) );
 		define( 'WC_POSTPAY_VERSION', $plugin_data['Version'] );
 
 		$this->settings = get_option( 'woocommerce_' . self::PAYMENT_GATEWAY_ID . '_settings' );
 		$this->enabled  = 'yes' === $this->settings['enabled'];
 
 		if ( ! class_exists( '\\Postpay\\Postpay' ) ) {
-			require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'vendor/autoload.php';
+			require_once WC_POSTPAY_DIR_PATH . 'vendor/autoload.php';
 		}
 
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/wc-postpay-functions.php';
-		require_once plugin_dir_path( WC_POSTPAY_FILE ) . 'includes/http/class-wc-postpay-adapter.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/wc-postpay-functions.php';
+		require_once WC_POSTPAY_DIR_PATH . 'includes/http/class-wc-postpay-adapter.php';
 
 		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'plugin_action_links' ) );
 		add_filter( 'woocommerce_payment_gateways', array( __CLASS__, 'add_gateway' ) );
