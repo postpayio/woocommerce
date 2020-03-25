@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/postpayio/woocommerce/releases"><img src="https://img.shields.io/github/release/postpayio/woocommerce.svg" alt="Latest Version"/></a> <a href="https://travis-ci.org/postpayio/woocommerce"><img src="https://img.shields.io/travis/postpayio/woocommerce.svg" alt="Build Status"/></a>
+  <a href="https://wordpress.org/plugins/postpay/"><img alt="WordPress Plugin Version" src="https://img.shields.io/wordpress/plugin/v/postpay?color=blue"/></a> <a href="https://wordpress.org/plugins/postpay/"><img alt="WordPress Plugin: Tested WP Version" src="https://img.shields.io/wordpress/plugin/tested/postpay"/></a> <a href="https://travis-ci.org/postpayio/woocommerce"><img src="https://img.shields.io/travis/postpayio/woocommerce.svg" alt="Build Status"/></a>
 </p>
 
 # Postpay for WooCommerce
