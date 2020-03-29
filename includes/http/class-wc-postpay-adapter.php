@@ -37,14 +37,16 @@ class WC_Postpay_Adapter {
 
 		require_once WC_POSTPAY_DIR_PATH . 'includes/http/class-wc-postpay-client.php';
 
-		$this->client = new Postpay(
-			array(
-				'sandbox'        => $gateway->sandbox,
-				'merchant_id'    => $gateway->get_option( 'merchant_id' ),
-				'secret_key'     => $gateway->get_option( 'sandbox_secret_key' ),
-				'client_handler' => new WC_Postpay_Client(),
-			)
-		);
+		if ( $this->gateway->is_available() ) {
+			$this->client = new Postpay(
+				array(
+					'sandbox'        => $gateway->sandbox,
+					'merchant_id'    => $gateway->get_option( 'merchant_id' ),
+					'secret_key'     => $gateway->get_secret_key(),
+					'client_handler' => new WC_Postpay_Client(),
+				)
+			);
+		}
 	}
 
 	/**
@@ -56,9 +58,14 @@ class WC_Postpay_Adapter {
 	 *
 	 * @return array
 	 *
+	 * @throws Exception If payment method is not properly configured.
 	 * @throws ApiException If response status code is invalid.
 	 */
 	public function request( $method, $path, $params = array() ) {
+		if ( ! $this->gateway->is_available() ) {
+			throw new Exception( __( 'Postpay is not properly configured.', 'postpay' ) );
+		}
+
 		try {
 			$response = $this->client->request( $method, $path, $params );
 		} catch ( ApiException $e ) {
@@ -86,6 +93,7 @@ class WC_Postpay_Adapter {
 	 *
 	 * @return array
 	 *
+	 * @throws Exception If payment method is not properly configured.
 	 * @throws ApiException If response status code is invalid.
 	 */
 	public function post( $path, $params = array() ) {
@@ -99,6 +107,7 @@ class WC_Postpay_Adapter {
 	 *
 	 * @return array
 	 *
+	 * @throws Exception If payment method is not properly configured.
 	 * @throws ApiException If response status code is invalid.
 	 */
 	public function checkout( $order_id ) {
@@ -113,6 +122,7 @@ class WC_Postpay_Adapter {
 	 *
 	 * @return array
 	 *
+	 * @throws Exception If payment method is not properly configured.
 	 * @throws ApiException If response status code is invalid.
 	 */
 	public function capture( $id ) {
@@ -129,6 +139,7 @@ class WC_Postpay_Adapter {
 	 *
 	 * @return array
 	 *
+	 * @throws Exception If payment method is not properly configured.
 	 * @throws ApiException If response status code is invalid.
 	 */
 	public function refund( $id, $refund_id, $amount, $description ) {

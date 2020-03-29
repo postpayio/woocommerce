@@ -53,6 +53,19 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	}
 
 	/**
+	 * Check if the gateway is available for use.
+	 *
+	 * @return bool
+	 */
+	public function is_available() {
+		return (
+			parent::is_available() &&
+			! empty( $this->get_option( 'merchant_id' ) ) &&
+			! empty( $this->get_secret_key() )
+		);
+	}
+
+	/**
 	 * Initialise settings form fields.
 	 */
 	public function init_form_fields() {
@@ -60,7 +73,16 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	}
 
 	/**
-	 * Builds our payment fields area.
+	 * Get secret key.
+	 *
+	 * @return string
+	 */
+	public function get_secret_key() {
+		return $this->sandbox ? $this->get_option( 'sandbox_secret_key' ) : $this->get_option( 'secret_key' );
+	}
+
+	/**
+	 * Build the payment fields area.
 	 */
 	public function payment_fields() {
 		wc_get_postpay_template( 'payment-fields.php', array( 'gateway' => $this ) );
@@ -184,11 +206,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	 * Register/queue frontend scripts.
 	 */
 	public function load_scripts() {
-		if ( ! $this->is_available() ) {
-			return;
-		}
-
-		if ( is_checkout() && ! empty( $_GET[ $this->token_param ] ) ) {
+		if ( $this->is_available() && is_checkout() && ! empty( $_GET[ $this->token_param ] ) ) {
 			wc_postpay_script(
 				'wc-postpay-checkout',
 				array( 'token' => wc_clean( wp_unslash( $_GET[ $this->token_param ] ) ) )
