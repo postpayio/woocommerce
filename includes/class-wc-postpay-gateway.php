@@ -191,7 +191,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 			$this->adapter->refund( $transaction_id, $refund_id, $amount, $reason );
 		} catch ( ApiException $e ) {
 			return new WP_Error(
-				'refund_error',
+				'error',
 				sprintf( /* translators: %1$s: transaction id %2$s: error code */
 					__( 'Postpay refund failed. ID: %1$s. Code: %2$s.', 'postpay' ),
 					$transaction_id,
@@ -199,7 +199,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 				)
 			);
 		} catch ( Exception $e ) {
-			return new WP_Error( 'refund_error', $e->getMessage() );
+			return new WP_Error( 'error', $e->getMessage() );
 		}
 		return true;
 	}
