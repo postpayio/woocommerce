@@ -4,22 +4,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postpay 0.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/postpay\n"
-"Language-Team: \n"
+"Language-Team: Spanish (Spain)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-03-25T03:33:01+00:00\n"
-"PO-Revision-Date: 2020-03-25 11:40+0700\n"
+"POT-Creation-Date: 2020-03-29T16:27:19+00:00\n"
+"PO-Revision-Date: 2020-03-29 16:45+0000\n"
 "X-Generator: Poedit 2.3\n"
 "X-Domain: postpay\n"
-"Last-Translator: \n"
+"Last-Translator: mongkok <dani@postpay.io>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es\n"
+"Language: es_ES\n"
 
 #. Plugin Name of the plugin
-#. Author of the plugin
-#: includes/class-wc-postpay-gateway.php:28 includes/wc-postpay-settings.php:19
-msgid "Postpay"
+msgid "WooCommerce Postpay Payment Gateway"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -30,6 +28,12 @@ msgstr ""
 #: includes/class-wc-postpay-gateway.php:29 includes/wc-postpay-settings.php:27
 msgid "Buy now and pay later with zero interest and zero fees."
 msgstr "Compra ahora y paga más tarde con cero interés y sin cargos."
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: includes/class-wc-postpay-gateway.php:28 includes/wc-postpay-settings.php:19
+msgid "Postpay"
+msgstr ""
 
 #. Author URI of the plugin
 msgid "https://postpay.io"
@@ -44,27 +48,31 @@ msgid "Proceed to Postpay"
 msgstr "Continuar con Postpay"
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:119
+#: includes/class-wc-postpay-gateway.php:141
 msgid "Postpay capture failed. ID: %1$s. Code: %2$s."
 msgstr "La captura con Postpay falló. ID: %1$s. Código: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:128
+#: includes/class-wc-postpay-gateway.php:150
 msgid "Postpay capture error."
 msgstr "Postpay error de captura."
 
 #. translators: %1$s: transaction id %2$s: order status
-#: includes/class-wc-postpay-gateway.php:144
+#: includes/class-wc-postpay-gateway.php:166
 msgid "Postpay order cancelled. ID: %1$s. Status: %2$s."
 msgstr "Postpay pedido cancelado. ID: %1$s. Estado: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:150
+#: includes/class-wc-postpay-gateway.php:172
 msgid "Postpay order cancelled."
 msgstr "Postpay pedido cancelado."
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:173
+#: includes/class-wc-postpay-gateway.php:196
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
 msgstr "La devolución con Postpay falló. ID: %1$s. Código: %2$s."
+
+#: includes/http/class-wc-postpay-adapter.php:66
+msgid "Postpay is not properly configured."
+msgstr "Postpay no está configurado correctamente."
 
 #: includes/wc-postpay-settings.php:10
 msgid "Enable/Disable"
@@ -80,7 +88,8 @@ msgstr "Título"
 
 #: includes/wc-postpay-settings.php:18
 msgid "This controls the title which the user sees during checkout."
-msgstr "Esto controla el título que el usuario ve durante el proceso de compra."
+msgstr ""
+"Esto controla el título que el usuario ve durante el proceso de compra."
 
 #: includes/wc-postpay-settings.php:23
 msgid "Description"
@@ -88,7 +97,8 @@ msgstr "Descripción"
 
 #: includes/wc-postpay-settings.php:26
 msgid "This controls the description which the user sees during checkout."
-msgstr "Esto controla la descripción que el usuario ve durante el proceso de compra."
+msgstr ""
+"Esto controla la descripción que el usuario ve durante el proceso de compra."
 
 #: includes/wc-postpay-settings.php:30
 msgid "Merchant ID"
@@ -136,7 +146,8 @@ msgstr "Habilitar In-Context Checkout"
 
 #: includes/wc-postpay-settings.php:62
 msgid "Checkout flow that keeps customers local to your website."
-msgstr "Proceso de checkout que mantiene a los clientes localizados en su sitio web."
+msgstr ""
+"Proceso de checkout que mantiene a los clientes localizados en su sitio web."
 
 #: includes/wc-postpay-settings.php:65
 msgid "Debug log"
@@ -174,6 +185,6 @@ msgstr "Habilitar Cart Widget"
 msgid "Show a promotional message on cart page."
 msgstr "Mostrar un mensaje promocional en la página del carrito."
 
-#: postpay.php:109
+#: postpay.php:111
 msgid "Settings"
 msgstr "Configuración"

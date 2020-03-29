@@ -2,23 +2,20 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Postpay 0.1.1\n"
+"Project-Id-Version: WooCommerce Postpay Payment Gateway 0.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/postpay\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-03-25T03:33:01+00:00\n"
+"POT-Creation-Date: 2020-03-29T16:27:19+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: postpay\n"
 
 #. Plugin Name of the plugin
-#. Author of the plugin
-#: includes/class-wc-postpay-gateway.php:28
-#: includes/wc-postpay-settings.php:19
-msgid "Postpay"
+msgid "WooCommerce Postpay Payment Gateway"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -29,6 +26,12 @@ msgstr ""
 #: includes/class-wc-postpay-gateway.php:29
 #: includes/wc-postpay-settings.php:27
 msgid "Buy now and pay later with zero interest and zero fees."
+msgstr ""
+
+#. Author of the plugin
+#: includes/class-wc-postpay-gateway.php:28
+#: includes/wc-postpay-settings.php:19
+msgid "Postpay"
 msgstr ""
 
 #. Author URI of the plugin
@@ -44,26 +47,30 @@ msgid "Proceed to Postpay"
 msgstr ""
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:119
+#: includes/class-wc-postpay-gateway.php:141
 msgid "Postpay capture failed. ID: %1$s. Code: %2$s."
 msgstr ""
 
-#: includes/class-wc-postpay-gateway.php:128
+#: includes/class-wc-postpay-gateway.php:150
 msgid "Postpay capture error."
 msgstr ""
 
 #. translators: %1$s: transaction id %2$s: order status
-#: includes/class-wc-postpay-gateway.php:144
+#: includes/class-wc-postpay-gateway.php:166
 msgid "Postpay order cancelled. ID: %1$s. Status: %2$s."
 msgstr ""
 
-#: includes/class-wc-postpay-gateway.php:150
+#: includes/class-wc-postpay-gateway.php:172
 msgid "Postpay order cancelled."
 msgstr ""
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:173
+#: includes/class-wc-postpay-gateway.php:196
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
+msgstr ""
+
+#: includes/http/class-wc-postpay-adapter.php:66
+msgid "Postpay is not properly configured."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:10
@@ -174,6 +181,6 @@ msgstr ""
 msgid "Show a promotional message on cart page."
 msgstr ""
 
-#: postpay.php:109
+#: postpay.php:111
 msgid "Settings"
 msgstr ""
