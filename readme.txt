@@ -3,8 +3,8 @@ Contributors: mongkok
 Requires at least: 4.4
 Tested up to: 5.3.2
 Requires PHP: 5.6
-Stable tag: 0.1.1
-Version: 0.1.1
+Stable tag: 0.1.2
+Version: 0.1.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: wordpress,woocommerce,payment,gateway,postpay
@@ -71,6 +71,11 @@ We agree that your security is of utmost importance. We are a PCI DSS compliant 
 4. Instalment plan approved.
 
 == Changelog ==
+
+= 0.1.2 - 2020-03-30 =
+* Disabled module if merchantId is not defined
+* Added is_available method to WC_Postpay_Gateway
+* Returned WP_Error instance on refund errors
 
 = 0.1.1 - 2020-03-25 =
 * Renamed plugin

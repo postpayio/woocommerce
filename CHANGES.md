@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+* Disabled module if merchantId is not defined
+* Added is_available method to WC_Postpay_Gateway
+* Returned WP_Error instance on refund errors
+
 ## 0.1.1
 
 * Renamed plugin

@@ -3,7 +3,7 @@
     "description": "Postpay Payment Gateway for WooCommerce",
     "type": "woocommerce-plugin",
     "license": "GPL-3.0-or-later",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "homepage": "https://github.com/postpayio/woocommerce",
     "keywords": ["wordpress", "woocommerce", "payment", "gateway", "postpay"],
     "authors": [
