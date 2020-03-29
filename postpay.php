@@ -61,7 +61,7 @@ class WC_Postpay {
 		define( 'WC_POSTPAY_VERSION', $plugin_data['Version'] );
 
 		$this->settings = get_option( 'woocommerce_' . self::PAYMENT_GATEWAY_ID . '_settings' );
-		$this->enabled  = 'yes' === $this->settings['enabled'];
+		$this->enabled  = 'yes' === $this->settings['enabled'] && ! empty( $this->settings['merchant_id'] );
 
 		if ( ! class_exists( '\\Postpay\\Postpay' ) ) {
 			require_once WC_POSTPAY_DIR_PATH . 'vendor/autoload.php';
