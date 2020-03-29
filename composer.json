@@ -13,8 +13,8 @@
         }
     ],
     "support": {
-        "source": "https://github.com/postpay.io/woocommerce",
-        "issues": "https://github.com/postpay.io/woocommerce/issues"
+        "source": "https://github.com/postpayio/woocommerce",
+        "issues": "https://github.com/postpayio/woocommerce/issues"
     },
     "require": {
         "php": ">=5.6|>=7.0",
