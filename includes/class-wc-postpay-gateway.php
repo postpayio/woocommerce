@@ -99,7 +99,8 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 		try {
 			$response = $this->adapter->checkout( $order_id );
 		} catch ( ApiException $e ) {
-			return array( 'result' => 'failed' );
+			wc_add_notice( $e->getMessage(), 'error' );
+			return array( 'result' => 'failure' );
 		}
 
 		if ( $this->in_context ) {
