@@ -8,9 +8,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-03-29T16:27:19+00:00\n"
-"PO-Revision-Date: 2020-03-29 16:45+0000\n"
 "X-Generator: Poedit 2.3\n"
+"POT-Creation-Date: 2020-04-20T19:10:20+00:00\n"
+"PO-Revision-Date: 2020-04-20 19:12+0000\n"
 "X-Domain: postpay\n"
 "Last-Translator: mongkok <dani@postpay.io>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -48,25 +48,25 @@ msgid "Proceed to Postpay"
 msgstr "Continuar con Postpay"
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:141
+#: includes/class-wc-postpay-gateway.php:154
 msgid "Postpay capture failed. ID: %1$s. Code: %2$s."
 msgstr "La captura con Postpay falló. ID: %1$s. Código: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:150
+#: includes/class-wc-postpay-gateway.php:163
 msgid "Postpay capture error."
 msgstr "Postpay error de captura."
 
 #. translators: %1$s: transaction id %2$s: order status
-#: includes/class-wc-postpay-gateway.php:166
+#: includes/class-wc-postpay-gateway.php:179
 msgid "Postpay order cancelled. ID: %1$s. Status: %2$s."
 msgstr "Postpay pedido cancelado. ID: %1$s. Estado: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:172
+#: includes/class-wc-postpay-gateway.php:185
 msgid "Postpay order cancelled."
 msgstr "Postpay pedido cancelado."
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:196
+#: includes/class-wc-postpay-gateway.php:209
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
 msgstr "La devolución con Postpay falló. ID: %1$s. Código: %2$s."
 
@@ -150,38 +150,51 @@ msgstr ""
 "Proceso de checkout que mantiene a los clientes localizados en su sitio web."
 
 #: includes/wc-postpay-settings.php:65
+msgid "Minimum Order Amount"
+msgstr "Cantidad mínima del pedido"
+msgstr "Establezca una cantidad mínima para el checkout con Postpay."
+
+#: includes/wc-postpay-settings.php:70
+msgid "Maximum Order Amount"
+msgstr "Cantidad máxima del pedido"
+
+#: includes/wc-postpay-settings.php:72
+msgid "Set a maximum order amount for Postpay checkout."
+msgstr "Establezca una cantidad máxima para el checkout con Postpay."
+
+#: includes/wc-postpay-settings.php:75
 msgid "Debug log"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:67
+#: includes/wc-postpay-settings.php:77
 msgid "Enable logging"
 msgstr "Habilitar logging"
 
-#: includes/wc-postpay-settings.php:69
+#: includes/wc-postpay-settings.php:79
 msgid "Log Postpay events, such as HTTP requests."
 msgstr "Registra los eventos Postpay, como las peticiones HTTP."
 
-#: includes/wc-postpay-settings.php:72
+#: includes/wc-postpay-settings.php:82
 msgid "Product Widget"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:74
+#: includes/wc-postpay-settings.php:84
 msgid "Enable Product Widget"
 msgstr "Habilitar Product Widget"
 
-#: includes/wc-postpay-settings.php:76
+#: includes/wc-postpay-settings.php:86
 msgid "Show a promotional message on product pages."
 msgstr "Mostrar un mensaje promocional en las páginas de los productos."
 
-#: includes/wc-postpay-settings.php:79
+#: includes/wc-postpay-settings.php:89
 msgid "Cart Widget"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:81
+#: includes/wc-postpay-settings.php:91
 msgid "Enable Cart Widget"
 msgstr "Habilitar Cart Widget"
 
-#: includes/wc-postpay-settings.php:83
+#: includes/wc-postpay-settings.php:93
 msgid "Show a promotional message on cart page."
 msgstr "Mostrar un mensaje promocional en la página del carrito."
 
