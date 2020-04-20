@@ -131,6 +131,13 @@ class WC_Postpay {
 		}
 	}
 
+	/**
+	 * Return if the amount is between maximum and minimum.
+	 *
+	 * @param float $amount Amount.
+	 *
+	 * @return boolean
+	 */
 	protected function is_valid_amount( $amount ) {
 		$max_amount = $this->settings['max_amount'];
 		$min_amount = $this->settings['min_amount'];
