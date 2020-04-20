@@ -34,7 +34,7 @@
             "phpcbf -p"
         ],
         "makepot-audit": [
-            "wp i18n make-pot . --slug=postpay"
+            "wp i18n make-pot . --slug=postpay --exclude=svn"
         ],
         "makepot": [
             "@makepot-audit --skip-audit"
