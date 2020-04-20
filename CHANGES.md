@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3
+
+* Added max amount and min amount settings
+* Added checkout API error message
+
 ## 0.1.2
 
 * Disabled module if merchantId is not defined
