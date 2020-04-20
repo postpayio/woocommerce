@@ -10,7 +10,7 @@
  * Developer URI: https://github.com/mongkok
  *
  * Requires at least: 4.4
- * Tested up to: 5.3.2
+ * Tested up to: 5.4
  * WC requires at least: 3.0
  * WC tested up to: 3.9
  *
