@@ -131,12 +131,27 @@ class WC_Postpay {
 		}
 	}
 
+	protected function is_valid_amount( $amount ) {
+		$max_amount = $this->settings['max_amount'];
+		$min_amount = $this->settings['min_amount'];
+
+		return ( ( 0 < $amount ) &&
+			( empty( $max_amount ) || $max_amount > $amount ) &&
+			( empty( $min_amount ) || $min_amount < $amount )
+		);
+	}
+
 	/**
 	 * Render product widget.
 	 */
 	public function product_widget() {
 		if ( $this->enabled && 'yes' === $this->settings['product_widget'] ) {
-			wc_get_postpay_template( 'widgets/product.php' );
+			global $product;
+			$price = wc_get_price_including_tax( $product );
+
+			if ( $this->is_valid_amount( $price ) ) {
+				wc_get_postpay_template( 'widgets/product.php', array( 'price' => $price ) );				
+			}
 		}
 	}
 
@@ -145,7 +160,11 @@ class WC_Postpay {
 	 */
 	public function cart_widget() {
 		if ( $this->enabled && 'yes' === $this->settings['cart_widget'] ) {
-			wc_get_postpay_template( 'widgets/cart.php' );
+			$total = WC()->cart->total;
+
+			if ( $this->is_valid_amount( $total ) ) {
+				wc_get_postpay_template( 'widgets/cart.php', array( 'total' => $total ) );				
+			}
 		}
 	}
 
