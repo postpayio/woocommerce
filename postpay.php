@@ -157,7 +157,7 @@ class WC_Postpay {
 			$price = wc_get_price_including_tax( $product );
 
 			if ( $this->is_valid_amount( $price ) ) {
-				wc_get_postpay_template( 'widgets/product.php', array( 'price' => $price ) );				
+				wc_get_postpay_template( 'widgets/product.php', array( 'price' => $price ) );
 			}
 		}
 	}
@@ -170,7 +170,7 @@ class WC_Postpay {
 			$total = WC()->cart->total;
 
 			if ( $this->is_valid_amount( $total ) ) {
-				wc_get_postpay_template( 'widgets/cart.php', array( 'total' => $total ) );				
+				wc_get_postpay_template( 'widgets/cart.php', array( 'total' => $total ) );
 			}
 		}
 	}

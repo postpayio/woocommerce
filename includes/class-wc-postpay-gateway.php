@@ -69,7 +69,6 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 		if ( $is_available && WC()->cart ) {
 			$total = $this->get_order_total();
 
-			// parent::is_available checks max_amount
 			if ( 0 < $total && $this->min_amount > $total ) {
 				$is_available = false;
 			}
