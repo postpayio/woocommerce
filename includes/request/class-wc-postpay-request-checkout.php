@@ -29,18 +29,11 @@ class WC_Postpay_Request_Checkout {
 
 		$order = wc_get_order( $order_id );
 
-		if ( is_user_logged_in() ) {
-			$customer = WC_Postpay_Request_Customer::build( $order->get_user_id() );
-		} else {
-			$customer = WC_Postpay_Request_Guest::build( $order );
-		}
-
-		return array(
+		$data = array(
 			'order_id'        => $order_id . '-' . uniqid(),
 			'total_amount'    => WC_Postpay_Adapter::decimal( $order->get_total() ),
 			'tax_amount'      => WC_Postpay_Adapter::decimal( $order->get_total_tax() ),
 			'currency'        => $order->get_currency(),
-			'shipping'        => WC_Postpay_Request_Shipping::build( $order ),
 			'billing_address' => WC_Postpay_Request_Address::build( $order->get_address( 'billing' ) ),
 			'customer'        => $customer,
 			'items'           => array_map(
@@ -59,6 +52,18 @@ class WC_Postpay_Request_Checkout {
 			),
 			'metadata'        => WC_Postpay_Request_Metadata::build(),
 		);
+
+		if ( is_user_logged_in() ) {
+			$data['customer'] = WC_Postpay_Request_Customer::build( $order->get_user_id() );
+		} else {
+			$data['customer'] = WC_Postpay_Request_Guest::build( $order );
+		}
+
+		if ( $order->get_shipping_method() ) {
+			$data['shipping'] = WC_Postpay_Request_Shipping::build( $order );
+		}
+
+		return $data;
 	}
 
 	/**
