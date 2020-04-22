@@ -72,6 +72,10 @@ We agree that your security is of utmost importance. We are a PCI DSS compliant 
 
 == Changelog ==
 
+= 0.1.4 - 2020-04-23 =
+* Fixed sandbox setting name
+* Allowed empty shipping method
+
 = 0.1.3 - 2020-04-21 =
 * Added max amount and min amount settings
 * Added checkout API error message

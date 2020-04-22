@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4
+
+* Fixed sandbox setting name
+* Allowed empty shipping method
+
 ## 0.1.3
 
 * Added max amount and min amount settings
