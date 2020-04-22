@@ -47,7 +47,7 @@ return array(
 		'default'     => '',
 		'desc_tip'    => true,
 	),
-	'testmode'           => array(
+	'sandbox'            => array(
 		'title'       => __( 'Postpay Sandbox', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable Postpay Sandbox', 'postpay' ),
