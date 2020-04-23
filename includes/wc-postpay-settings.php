@@ -16,7 +16,7 @@ return array(
 		'title'       => __( 'Title', 'postpay' ),
 		'type'        => 'text',
 		'description' => __( 'This controls the title which the user sees during checkout.', 'postpay' ),
-		'default'     => __( 'Postpay', 'postpay' ),
+		'default'     => __( 'Instalments with Postpay', 'postpay' ),
 		'desc_tip'    => true,
 	),
 	'description'        => array(
