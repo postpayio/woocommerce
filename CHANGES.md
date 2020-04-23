@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5
+
+* Added gateway icon
+* Changed default description
+
 ## 0.1.4
 
 * Fixed sandbox setting name
