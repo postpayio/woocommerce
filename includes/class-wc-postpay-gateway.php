@@ -41,6 +41,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 		$this->debug       = 'yes' === $this->get_option( 'debug', 'no' );
 		$this->max_amount  = $this->get_option( 'max_amount', 0 );
 		$this->min_amount  = $this->get_option( 'min_amount', 0 );
+		$this->icon        = WC_POSTPAY_DIR_URL . 'assets/images/logo-' . $this->get_option( 'icon' ) . '.png';
 
 		require_once WC_POSTPAY_DIR_PATH . 'includes/class-wc-postpay-api.php';
 
