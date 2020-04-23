@@ -3,7 +3,7 @@ Contributors: mongkok
 Requires at least: 4.4
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 0.1.3
+Stable tag: 0.1.5
 Version: 0.1.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
