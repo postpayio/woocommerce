@@ -76,8 +76,8 @@ class WC_Postpay {
 		load_plugin_textdomain( 'postpay', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ) );
-		add_action( 'woocommerce_single_product_summary', array( $this, 'product_widget' ) );
-		add_filter( 'woocommerce_after_cart_totals', array( $this, 'cart_widget' ) );
+		add_action( 'woocommerce_single_product_summary', array( $this, 'product_widget' ), 20 );
+		add_action( 'woocommerce_after_cart_totals', array( $this, 'cart_widget' ), 20 );
 	}
 
 	/**
