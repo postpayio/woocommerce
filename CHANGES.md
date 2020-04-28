@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.6
+
+* Added priority parameter to widget hooks
+
 ## 0.1.5
 
 * Added gateway icon
