@@ -6,6 +6,7 @@
 defined( 'ABSPATH' ) || exit;
 
 use Postpay\Exceptions\PostpayException;
+use Postpay\Http\Request;
 use Postpay\Http\Response;
 use Postpay\HttpClients\ClientInterface;
 
@@ -24,7 +25,7 @@ class WC_Postpay_Client implements ClientInterface {
 	 *
 	 * @throws PostpayException If response status code is invalid.
 	 */
-	public function send( $request, $timeout = null ) {
+	public function send( Request $request, $timeout = null ) {
 		$options = array(
 			'method'  => $request->getMethod(),
 			'headers' => array_merge(
