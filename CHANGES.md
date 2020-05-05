@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.7
+
+* Fixed interface declaration compatible
+
 ## 0.1.6
 
 * Added priority parameter to widget hooks
