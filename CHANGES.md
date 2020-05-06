@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.8
+
+* Added theme to settings
+* Removed widget amount validation
+
 ## 0.1.7
 
 * Fixed interface declaration compatible
