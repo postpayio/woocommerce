@@ -4,6 +4,10 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+global $product;
+
+$price = wc_get_price_including_tax( $product );
 ?>
 
 <div
