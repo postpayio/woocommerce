@@ -126,6 +126,7 @@ class WC_Postpay {
 				array(
 					'sandbox'    => 'yes' === $this->settings['sandbox'],
 					'merchantId' => $this->settings['merchant_id'],
+					'theme'      => $this->settings['theme'] ?? 'light',
 				)
 			);
 		}

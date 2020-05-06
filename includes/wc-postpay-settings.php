@@ -26,15 +26,15 @@ return array(
 		'description' => __( 'This controls the description which the user sees during checkout.', 'postpay' ),
 		'default'     => __( 'Buy now and pay later with zero interest and zero fees.', 'postpay' ),
 	),
-	'icon'               => array(
-		'title'       => __( 'Icon Color', 'postpay' ),
+	'theme'              => array(
+		'title'       => __( 'Theme', 'postpay' ),
 		'type'        => 'select',
 		'desc_tip'    => true,
-		'description' => __( 'This controls the color of the icon which the user sees during checkout.', 'postpay' ),
-		'default'     => 'blue',
+		'description' => __( 'This controls the color to coordinate and contrast with different backgrounds.', 'postpay' ),
+		'default'     => 'light',
 		'options'     => array(
-			'blue'  => __( 'Blue', 'postpay' ),
-			'white' => __( 'White', 'postpay' ),
+			'light' => __( 'Light', 'postpay' ),
+			'dark'  => __( 'Dark', 'postpay' ),
 		),
 	),
 	'merchant_id'        => array(

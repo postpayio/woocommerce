@@ -35,13 +35,14 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 
 		$this->title       = $this->get_option( 'title' );
 		$this->description = $this->get_option( 'description' );
+		$this->theme       = $this->get_option( 'theme' );
 		$this->token_param = $this->id . '-token';
 		$this->sandbox     = 'yes' === $this->get_option( 'sandbox', 'yes' );
 		$this->in_context  = 'yes' === $this->get_option( 'in_context', 'no' );
 		$this->debug       = 'yes' === $this->get_option( 'debug', 'no' );
 		$this->max_amount  = $this->get_option( 'max_amount', 0 );
 		$this->min_amount  = $this->get_option( 'min_amount', 0 );
-		$this->icon        = WC_POSTPAY_DIR_URL . 'assets/images/logo-' . $this->get_option( 'icon' ) . '.png';
+		$this->icon        = WC_POSTPAY_DIR_URL . 'assets/images/logo-' . $this->get_option( 'theme' ) . '.png';
 
 		require_once WC_POSTPAY_DIR_PATH . 'includes/class-wc-postpay-api.php';
 
