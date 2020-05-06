@@ -9,8 +9,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.3\n"
-"POT-Creation-Date: 2020-04-23T19:30:34+00:00\n"
-"PO-Revision-Date: 2020-04-23 19:40+0000\n"
+"POT-Creation-Date: 2020-05-06T13:21:35+00:00\n"
+"PO-Revision-Date: 2020-05-06 13:24+0000\n"
 "X-Domain: postpay\n"
 "Last-Translator: mongkok <dani@postpay.io>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -48,25 +48,25 @@ msgid "Proceed to Postpay"
 msgstr "Continuar con Postpay"
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:154
+#: includes/class-wc-postpay-gateway.php:155
 msgid "Postpay capture failed. ID: %1$s. Code: %2$s."
 msgstr "La captura con Postpay falló. ID: %1$s. Código: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:163
+#: includes/class-wc-postpay-gateway.php:164
 msgid "Postpay capture error."
 msgstr "Postpay error de captura."
 
 #. translators: %1$s: transaction id %2$s: order status
-#: includes/class-wc-postpay-gateway.php:179
+#: includes/class-wc-postpay-gateway.php:180
 msgid "Postpay order cancelled. ID: %1$s. Status: %2$s."
 msgstr "Postpay pedido cancelado. ID: %1$s. Estado: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:185
+#: includes/class-wc-postpay-gateway.php:186
 msgid "Postpay order cancelled."
 msgstr "Postpay pedido cancelado."
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:209
+#: includes/class-wc-postpay-gateway.php:210
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
 msgstr "La devolución con Postpay falló. ID: %1$s. Código: %2$s."
 
@@ -105,23 +105,23 @@ msgstr ""
 "Esto controla la descripción que el usuario ve durante el proceso de compra."
 
 #: includes/wc-postpay-settings.php:30
-msgid "Icon Color"
-msgstr "Color del Icono"
+msgid "Theme"
+msgstr "Tema"
 
 #: includes/wc-postpay-settings.php:33
 msgid ""
-"This controls the color of the icon which the user sees during checkout."
+"This controls the color to coordinate and contrast with different "
+"backgrounds."
 msgstr ""
-"Esto controla el color del icono que el usuario ve durante el proceso de "
-"compra."
+"Esto controla el color para coordinar y contrastar con diferentes fondos."
 
 #: includes/wc-postpay-settings.php:36
-msgid "Blue"
-msgstr "Azul"
+msgid "Light"
+msgstr "Claro"
 
 #: includes/wc-postpay-settings.php:37
-msgid "White"
-msgstr "Blanco"
+msgid "Dark"
+msgstr "Oscuro"
 
 #: includes/wc-postpay-settings.php:41
 msgid "Merchant ID"
