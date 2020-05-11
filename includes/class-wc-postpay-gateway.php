@@ -40,8 +40,6 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 		$this->sandbox     = 'yes' === $this->get_option( 'sandbox', 'yes' );
 		$this->in_context  = 'yes' === $this->get_option( 'in_context', 'no' );
 		$this->debug       = 'yes' === $this->get_option( 'debug', 'no' );
-		$this->max_amount  = $this->get_option( 'max_amount', 0 );
-		$this->min_amount  = $this->get_option( 'min_amount', 0 );
 		$this->icon        = WC_POSTPAY_DIR_URL . 'assets/images/logo-' . $this->get_option( 'theme' ) . '.png';
 
 		require_once WC_POSTPAY_DIR_PATH . 'includes/class-wc-postpay-api.php';
@@ -62,20 +60,11 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	 * @return bool
 	 */
 	public function is_available() {
-		$is_available = (
+		return (
 			parent::is_available() &&
 			! empty( $this->get_option( 'merchant_id' ) ) &&
 			! empty( $this->get_secret_key() )
 		);
-
-		if ( $is_available && WC()->cart ) {
-			$total = $this->get_order_total();
-
-			if ( 0 < $total && $this->min_amount > $total ) {
-				$is_available = false;
-			}
-		}
-		return $is_available;
 	}
 
 	/**
