@@ -40,6 +40,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 		$this->sandbox     = 'yes' === $this->get_option( 'sandbox', 'yes' );
 		$this->in_context  = 'yes' === $this->get_option( 'in_context', 'no' );
 		$this->debug       = 'yes' === $this->get_option( 'debug', 'no' );
+		$this->css         = $this->get_option( 'css', '#payment_method_' . $this->id );
 		$this->icon        = WC_POSTPAY_DIR_URL . 'assets/images/logo-' . $this->get_option( 'theme' ) . '.png';
 
 		require_once WC_POSTPAY_DIR_PATH . 'includes/class-wc-postpay-api.php';

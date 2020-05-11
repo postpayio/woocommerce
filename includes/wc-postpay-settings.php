@@ -93,4 +93,11 @@ return array(
 		'default'     => 'no',
 		'description' => __( 'Show a promotional message on cart page.', 'postpay' ),
 	),
+	'css'                => array(
+		'title'       => __( 'CSS selector', 'postpay' ),
+		'type'        => 'text',
+		'description' => __( 'Selector to hide the payment method if it is not available.', 'postpay' ),
+		'default'     => '',
+		'desc_tip'    => true,
+	),
 );
