@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 <script>
 jQuery( document ).ready(
 	function( $ ) {
-		postpay.widget.refresh();
+		postpay.ui.refresh();
 	}
 );
 </script>
