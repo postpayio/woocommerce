@@ -73,7 +73,7 @@ We agree that your security is of utmost importance. We are a PCI DSS compliant 
 == Changelog ==
 
 = 0.1.9 - 2020-05-13 =
-* Add instalment plan widget
+* Added instalment plan widget
 * Removed max_amount and min amount settings
 
 = 0.1.8 - 2020-05-06 =

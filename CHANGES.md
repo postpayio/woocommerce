@@ -2,7 +2,7 @@
 
 ## 0.1.9
 
-* Add instalment plan widget
+* Added instalment plan widget
 * Removed max_amount and min amount settings
 
 ## 0.1.8
