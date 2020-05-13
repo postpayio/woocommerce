@@ -72,16 +72,6 @@ return array(
 		'default'     => 'no',
 		'description' => __( 'Checkout flow that keeps customers local to your website.', 'postpay' ),
 	),
-	'min_amount'         => array(
-		'title'       => __( 'Minimum Order Amount', 'postpay' ),
-		'type'        => 'number',
-		'description' => __( 'Set a minimum order amount for Postpay checkout.', 'postpay' ),
-	),
-	'max_amount'         => array(
-		'title'       => __( 'Maximum Order Amount', 'postpay' ),
-		'type'        => 'number',
-		'description' => __( 'Set a maximum order amount for Postpay checkout.', 'postpay' ),
-	),
 	'debug'              => array(
 		'title'       => __( 'Debug log', 'postpay' ),
 		'type'        => 'checkbox',
@@ -102,5 +92,12 @@ return array(
 		'label'       => __( 'Enable Cart Widget', 'postpay' ),
 		'default'     => 'no',
 		'description' => __( 'Show a promotional message on cart page.', 'postpay' ),
+	),
+	'css'                => array(
+		'title'       => __( 'CSS selector', 'postpay' ),
+		'type'        => 'text',
+		'description' => __( 'Selector to hide the payment method if it is not available.', 'postpay' ),
+		'default'     => '',
+		'desc_tip'    => true,
 	),
 );
