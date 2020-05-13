@@ -9,10 +9,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.3\n"
-"POT-Creation-Date: 2020-05-06T13:21:35+00:00\n"
-"PO-Revision-Date: 2020-05-06 13:24+0000\n"
+"POT-Creation-Date: 2020-05-13T02:15:32+00:00\n"
+"PO-Revision-Date: 2020-05-13 02:16+0000\n"
 "X-Domain: postpay\n"
-"Last-Translator: mongkok <dani@postpay.io>\n"
+"Last-Translator: admin <dani@postpay.io>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: es_ES\n"
 
@@ -48,25 +48,25 @@ msgid "Proceed to Postpay"
 msgstr "Continuar con Postpay"
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:155
+#: includes/class-wc-postpay-gateway.php:145
 msgid "Postpay capture failed. ID: %1$s. Code: %2$s."
 msgstr "La captura con Postpay falló. ID: %1$s. Código: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:164
+#: includes/class-wc-postpay-gateway.php:154
 msgid "Postpay capture error."
 msgstr "Postpay error de captura."
 
 #. translators: %1$s: transaction id %2$s: order status
-#: includes/class-wc-postpay-gateway.php:180
+#: includes/class-wc-postpay-gateway.php:170
 msgid "Postpay order cancelled. ID: %1$s. Status: %2$s."
 msgstr "Postpay pedido cancelado. ID: %1$s. Estado: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:186
+#: includes/class-wc-postpay-gateway.php:176
 msgid "Postpay order cancelled."
 msgstr "Postpay pedido cancelado."
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:210
+#: includes/class-wc-postpay-gateway.php:200
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
 msgstr "La devolución con Postpay falló. ID: %1$s. Código: %2$s."
 
@@ -173,56 +173,48 @@ msgstr ""
 "Proceso de checkout que mantiene a los clientes localizados en su sitio web."
 
 #: includes/wc-postpay-settings.php:76
-msgid "Minimum Order Amount"
-msgstr "Establezca una cantidad mínima para el checkout con Postpay."
-
-#: includes/wc-postpay-settings.php:78
-msgid "Set a minimum order amount for Postpay checkout."
-msgstr "Establezca una cantidad mínima para el checkout con Postpay."
-
-#: includes/wc-postpay-settings.php:81
-msgid "Maximum Order Amount"
-msgstr "Cantidad máxima del pedido"
-
-#: includes/wc-postpay-settings.php:83
-msgid "Set a maximum order amount for Postpay checkout."
-msgstr "Establezca una cantidad máxima para el checkout con Postpay."
-
-#: includes/wc-postpay-settings.php:86
 msgid "Debug log"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:88
+#: includes/wc-postpay-settings.php:78
 msgid "Enable logging"
 msgstr "Habilitar logging"
 
-#: includes/wc-postpay-settings.php:90
+#: includes/wc-postpay-settings.php:80
 msgid "Log Postpay events, such as HTTP requests."
 msgstr "Registra los eventos Postpay, como las peticiones HTTP."
 
-#: includes/wc-postpay-settings.php:93
+#: includes/wc-postpay-settings.php:83
 msgid "Product Widget"
 msgstr "Widget de Producto"
 
-#: includes/wc-postpay-settings.php:95
+#: includes/wc-postpay-settings.php:85
 msgid "Enable Product Widget"
 msgstr "Habilitar Product Widget"
 
-#: includes/wc-postpay-settings.php:97
+#: includes/wc-postpay-settings.php:87
 msgid "Show a promotional message on product pages."
 msgstr "Mostrar un mensaje promocional en las páginas de los productos."
 
-#: includes/wc-postpay-settings.php:100
+#: includes/wc-postpay-settings.php:90
 msgid "Cart Widget"
 msgstr "Widget de carrito"
 
-#: includes/wc-postpay-settings.php:102
+#: includes/wc-postpay-settings.php:92
 msgid "Enable Cart Widget"
 msgstr "Habilitar Cart Widget"
 
-#: includes/wc-postpay-settings.php:104
+#: includes/wc-postpay-settings.php:94
 msgid "Show a promotional message on cart page."
 msgstr "Mostrar un mensaje promocional en la página del carrito."
+
+#: includes/wc-postpay-settings.php:97
+msgid "CSS selector"
+msgstr "Selector CSS"
+
+#: includes/wc-postpay-settings.php:99
+msgid "Selector to hide the payment method if it is not available."
+msgstr "Selector para ocultar el método de pago si no está disponible."
 
 #: postpay.php:111
 msgid "Settings"
