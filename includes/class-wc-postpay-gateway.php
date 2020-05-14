@@ -40,6 +40,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 		$this->sandbox     = 'yes' === $this->get_option( 'sandbox', 'yes' );
 		$this->in_context  = 'yes' === $this->get_option( 'in_context', 'no' );
 		$this->debug       = 'yes' === $this->get_option( 'debug', 'no' );
+		$this->widget      = 'yes' === $this->get_option( 'payment_method_widget', 'yes' );
 		$this->css         = $this->get_option( 'css', '#payment ul li.payment_method_' . $this->id );
 		$this->icon        = WC_POSTPAY_DIR_URL . 'assets/images/logo-' . $this->get_option( 'theme' ) . '.png';
 
