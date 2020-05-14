@@ -9,8 +9,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.3\n"
-"POT-Creation-Date: 2020-05-13T02:15:32+00:00\n"
-"PO-Revision-Date: 2020-05-13 02:16+0000\n"
+"POT-Creation-Date: 2020-05-14T19:19:17+00:00\n"
+"PO-Revision-Date: 2020-05-14 19:22+0000\n"
 "X-Domain: postpay\n"
 "Last-Translator: admin <dani@postpay.io>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -48,25 +48,25 @@ msgid "Proceed to Postpay"
 msgstr "Continuar con Postpay"
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:145
+#: includes/class-wc-postpay-gateway.php:146
 msgid "Postpay capture failed. ID: %1$s. Code: %2$s."
 msgstr "La captura con Postpay falló. ID: %1$s. Código: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:154
+#: includes/class-wc-postpay-gateway.php:155
 msgid "Postpay capture error."
 msgstr "Postpay error de captura."
 
 #. translators: %1$s: transaction id %2$s: order status
-#: includes/class-wc-postpay-gateway.php:170
+#: includes/class-wc-postpay-gateway.php:171
 msgid "Postpay order cancelled. ID: %1$s. Status: %2$s."
 msgstr "Postpay pedido cancelado. ID: %1$s. Estado: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:176
+#: includes/class-wc-postpay-gateway.php:177
 msgid "Postpay order cancelled."
 msgstr "Postpay pedido cancelado."
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:200
+#: includes/class-wc-postpay-gateway.php:201
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
 msgstr "La devolución con Postpay falló. ID: %1$s. Código: %2$s."
 
@@ -190,7 +190,7 @@ msgstr "Widget de Producto"
 
 #: includes/wc-postpay-settings.php:85
 msgid "Enable Product Widget"
-msgstr "Habilitar Product Widget"
+msgstr "Habilitar widget de producto"
 
 #: includes/wc-postpay-settings.php:87
 msgid "Show a promotional message on product pages."
@@ -202,17 +202,30 @@ msgstr "Widget de carrito"
 
 #: includes/wc-postpay-settings.php:92
 msgid "Enable Cart Widget"
-msgstr "Habilitar Cart Widget"
+msgstr "Habilitar widget de carrito"
 
 #: includes/wc-postpay-settings.php:94
 msgid "Show a promotional message on cart page."
 msgstr "Mostrar un mensaje promocional en la página del carrito."
 
 #: includes/wc-postpay-settings.php:97
+msgid "Payment Method Widget"
+msgstr "Widget del método de pago"
+
+#: includes/wc-postpay-settings.php:99
+msgid "Enable Payment Method Widget"
+msgstr "Habilitar widget del método de pago"
+
+#: includes/wc-postpay-settings.php:101
+msgid "Show the instalment plan info on payment method selection."
+msgstr ""
+"Mostrar la información del plan de cuotas en la selección del método de pago."
+
+#: includes/wc-postpay-settings.php:104
 msgid "CSS selector"
 msgstr "Selector CSS"
 
-#: includes/wc-postpay-settings.php:99
+#: includes/wc-postpay-settings.php:106
 msgid "Selector to hide the payment method if it is not available."
 msgstr "Selector para ocultar el método de pago si no está disponible."
 

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-05-13T02:15:32+00:00\n"
+"POT-Creation-Date: 2020-05-14T19:19:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: postpay\n"
@@ -46,25 +46,25 @@ msgid "Proceed to Postpay"
 msgstr ""
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:145
+#: includes/class-wc-postpay-gateway.php:146
 msgid "Postpay capture failed. ID: %1$s. Code: %2$s."
 msgstr ""
 
-#: includes/class-wc-postpay-gateway.php:154
+#: includes/class-wc-postpay-gateway.php:155
 msgid "Postpay capture error."
 msgstr ""
 
 #. translators: %1$s: transaction id %2$s: order status
-#: includes/class-wc-postpay-gateway.php:170
+#: includes/class-wc-postpay-gateway.php:171
 msgid "Postpay order cancelled. ID: %1$s. Status: %2$s."
 msgstr ""
 
-#: includes/class-wc-postpay-gateway.php:176
+#: includes/class-wc-postpay-gateway.php:177
 msgid "Postpay order cancelled."
 msgstr ""
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:200
+#: includes/class-wc-postpay-gateway.php:201
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
 msgstr ""
 
@@ -201,10 +201,22 @@ msgid "Show a promotional message on cart page."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:97
-msgid "CSS selector"
+msgid "Payment Method Widget"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:99
+msgid "Enable Payment Method Widget"
+msgstr ""
+
+#: includes/wc-postpay-settings.php:101
+msgid "Show the instalment plan info on payment method selection."
+msgstr ""
+
+#: includes/wc-postpay-settings.php:104
+msgid "CSS selector"
+msgstr ""
+
+#: includes/wc-postpay-settings.php:106
 msgid "Selector to hide the payment method if it is not available."
 msgstr ""
 
