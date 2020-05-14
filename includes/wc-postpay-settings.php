@@ -83,14 +83,14 @@ return array(
 		'title'       => __( 'Product Widget', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable Product Widget', 'postpay' ),
-		'default'     => 'no',
+		'default'     => 'yes',
 		'description' => __( 'Show a promotional message on product pages.', 'postpay' ),
 	),
 	'cart_widget'        => array(
 		'title'       => __( 'Cart Widget', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable Cart Widget', 'postpay' ),
-		'default'     => 'no',
+		'default'     => 'yes',
 		'description' => __( 'Show a promotional message on cart page.', 'postpay' ),
 	),
 	'css'                => array(
