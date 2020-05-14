@@ -16,14 +16,14 @@ defined( 'ABSPATH' ) || exit;
 		data-country="<?php echo WC()->customer->get_shipping_country(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
 		data-hide-if-invalid="<?php echo $gateway->css; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
 	></div>
+
+	<script>
+	jQuery( document ).ready(
+		function( $ ) {
+			postpay.ui.refresh();
+		}
+	);
+	</script>
 <?php else : ?>
 	<p><?php echo wpautop( wptexturize( $gateway->get_description() ) ); // @codingStandardsIgnoreLine. ?></p>
 <?php endif; ?>
-
-<script>
-jQuery( document ).ready(
-	function( $ ) {
-		postpay.ui.refresh();
-	}
-);
-</script>
