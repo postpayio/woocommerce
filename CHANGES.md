@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.10
+
+* Added Payment Method Widget to settings
+
 ## 0.1.9
 
 * Added instalment plan widget
