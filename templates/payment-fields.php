@@ -6,7 +6,6 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-
 <?php if ( $gateway->widget ) : ?>
 	<div
 		class="postpay-widget"
