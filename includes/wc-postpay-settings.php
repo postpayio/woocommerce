@@ -6,27 +6,27 @@
 defined( 'ABSPATH' ) || exit;
 
 return array(
-	'enabled'            => array(
+	'enabled'               => array(
 		'title'   => __( 'Enable/Disable', 'postpay' ),
 		'type'    => 'checkbox',
 		'label'   => __( 'Enable Postpay', 'postpay' ),
 		'default' => 'yes',
 	),
-	'title'              => array(
+	'title'                 => array(
 		'title'       => __( 'Title', 'postpay' ),
 		'type'        => 'text',
 		'description' => __( 'This controls the title which the user sees during checkout.', 'postpay' ),
 		'default'     => __( 'Instalments with Postpay', 'postpay' ),
 		'desc_tip'    => true,
 	),
-	'description'        => array(
+	'description'           => array(
 		'title'       => __( 'Description', 'postpay' ),
 		'type'        => 'text',
 		'desc_tip'    => true,
 		'description' => __( 'This controls the description which the user sees during checkout.', 'postpay' ),
 		'default'     => __( 'Buy now and pay later with zero interest and zero fees.', 'postpay' ),
 	),
-	'theme'              => array(
+	'theme'                 => array(
 		'title'       => __( 'Theme', 'postpay' ),
 		'type'        => 'select',
 		'desc_tip'    => true,
@@ -37,70 +37,70 @@ return array(
 			'dark'  => __( 'Dark', 'postpay' ),
 		),
 	),
-	'merchant_id'        => array(
+	'merchant_id'           => array(
 		'title'       => __( 'Merchant ID', 'postpay' ),
 		'type'        => 'text',
 		'description' => __( 'Get your Merchant ID from Postpay.', 'postpay' ),
 		'default'     => '',
 		'desc_tip'    => true,
 	),
-	'secret_key'         => array(
+	'secret_key'            => array(
 		'title'       => __( 'Secret Key', 'postpay' ),
 		'type'        => 'password',
 		'description' => __( 'Get your Secret Key from Postpay.', 'postpay' ),
 		'default'     => '',
 		'desc_tip'    => true,
 	),
-	'sandbox_secret_key' => array(
+	'sandbox_secret_key'    => array(
 		'title'       => __( 'Sandbox Secret Key', 'postpay' ),
 		'type'        => 'password',
 		'description' => __( 'Get your Sandbox Secret Key from Postpay.', 'postpay' ),
 		'default'     => '',
 		'desc_tip'    => true,
 	),
-	'sandbox'            => array(
+	'sandbox'               => array(
 		'title'       => __( 'Postpay Sandbox', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable Postpay Sandbox', 'postpay' ),
 		'default'     => 'yes',
 		'description' => __( 'Postpay sandbox can be used to test payments.', 'postpay' ),
 	),
-	'in_context'         => array(
+	'in_context'            => array(
 		'title'       => __( 'In-Context Checkout', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable In-Context Checkout', 'postpay' ),
 		'default'     => 'no',
 		'description' => __( 'Checkout flow that keeps customers local to your website.', 'postpay' ),
 	),
-	'debug'              => array(
+	'debug'                 => array(
 		'title'       => __( 'Debug log', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable logging', 'postpay' ),
 		'default'     => 'no',
 		'description' => __( 'Log Postpay events, such as HTTP requests.', 'postpay' ),
 	),
-	'product_widget'     => array(
+	'product_widget'        => array(
 		'title'       => __( 'Product Widget', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable Product Widget', 'postpay' ),
 		'default'     => 'yes',
 		'description' => __( 'Show a promotional message on product pages.', 'postpay' ),
 	),
-	'cart_widget'        => array(
+	'cart_widget'           => array(
 		'title'       => __( 'Cart Widget', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable Cart Widget', 'postpay' ),
 		'default'     => 'yes',
 		'description' => __( 'Show a promotional message on cart page.', 'postpay' ),
 	),
-	'payment_method_widget'        => array(
+	'payment_method_widget' => array(
 		'title'       => __( 'Payment Method Widget', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable Payment Method Widget', 'postpay' ),
 		'default'     => 'yes',
 		'description' => __( 'Show the instalment plan info on payment method selection.', 'postpay' ),
 	),
-	'css'                => array(
+	'css'                   => array(
 		'title'       => __( 'CSS selector', 'postpay' ),
 		'type'        => 'text',
 		'description' => __( 'Selector to hide the payment method if it is not available.', 'postpay' ),
