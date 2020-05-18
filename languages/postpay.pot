@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-05-14T19:19:17+00:00\n"
+"POT-Creation-Date: 2020-05-18T23:33:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: postpay\n"
@@ -121,31 +121,31 @@ msgid "Merchant ID"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:43
-msgid "Get your Merchant ID from Postpay."
+msgid "Get your merchant ID from Postpay."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:48
-msgid "Secret Key"
+msgid "Secret key"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:50
-msgid "Get your Secret Key from Postpay."
+msgid "Get your secret Key from Postpay."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:55
-msgid "Sandbox Secret Key"
+msgid "Sandbox secret key"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:57
-msgid "Get your Sandbox Secret Key from Postpay."
+msgid "Get your sandbox secret key from Postpay."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:62
-msgid "Postpay Sandbox"
+msgid "Postpay sandbox"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:64
-msgid "Enable Postpay Sandbox"
+msgid "Enable Postpay sandbox"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:66
@@ -153,11 +153,11 @@ msgid "Postpay sandbox can be used to test payments."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:69
-msgid "In-Context Checkout"
+msgid "In-context checkout"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:71
-msgid "Enable In-Context Checkout"
+msgid "Enable in-context checkout"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:73
@@ -177,11 +177,11 @@ msgid "Log Postpay events, such as HTTP requests."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:83
-msgid "Product Widget"
+msgid "Product widget"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:85
-msgid "Enable Product Widget"
+msgid "Enable product widget"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:87
@@ -189,11 +189,11 @@ msgid "Show a promotional message on product pages."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:90
-msgid "Cart Widget"
+msgid "Cart widget"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:92
-msgid "Enable Cart Widget"
+msgid "Enable cart widget"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:94
@@ -201,15 +201,15 @@ msgid "Show a promotional message on cart page."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:97
-msgid "Payment Method Widget"
+msgid "Payment summary widget"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:99
-msgid "Enable Payment Method Widget"
+msgid "Enable payment summary widget"
 msgstr ""
 
 #: includes/wc-postpay-settings.php:101
-msgid "Show the instalment plan info on payment method selection."
+msgid "Show the payment summary on the payment method selection."
 msgstr ""
 
 #: includes/wc-postpay-settings.php:104
