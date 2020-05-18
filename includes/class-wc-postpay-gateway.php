@@ -165,12 +165,12 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	public function cancel( $transaction_id, $order_key ) {
 		$order = $this->get_order( $transaction_id, $order_key );
 
-		if ( $order && $order->needs_payment() && ! empty( $_GET['status'] ) ) {
+		if ( $order && $order->needs_payment() && ! empty( $_GET['status'] ) && 'CANCELLED' !== $_GET['status'] ) {
 			$order->add_order_note(
-				sprintf( /* translators: %1$s: transaction id %2$s: order status */
-					__( 'Postpay order cancelled. ID: %1$s. Status: %2$s.', 'postpay' ),
-					$transaction_id,
-					wc_clean( wp_unslash( $_GET['status'] ) )
+				sprintf( /* translators: %1$s: order status %2$s: transaction id */
+					__( 'Postpay order %1$s. ID: %2$s.', 'postpay' ),
+					wc_clean( wp_unslash( strtolower( $_GET['status'] ) ) ),
+					$transaction_id
 				)
 			);
 		}
