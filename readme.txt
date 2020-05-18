@@ -3,8 +3,8 @@ Contributors: mongkok
 Requires at least: 4.4
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 0.1.10
-Version: 0.1.10
+Stable tag: 0.1.11
+Version: 0.1.11
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: wordpress,woocommerce,payment,gateway,postpay
@@ -71,6 +71,11 @@ We agree that your security is of utmost importance. We are a PCI DSS compliant 
 4. Instalment plan approved.
 
 == Changelog ==
+
+= 0.1.11 - 2020-05-19 =
+* Removed checkout cancelled notes
+* Renamed payment method widget to payment summary
+* Modified in-context checkout default value
 
 = 0.1.10 - 2020-05-15 =
 * Added Payment Method Widget to settings

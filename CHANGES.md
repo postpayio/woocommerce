@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.11
+
+* Removed checkout cancelled notes
+* Renamed payment method widget to payment summary
+* Modified in-context checkout default value
+
 ## 0.1.10
 
 * Added Payment Method Widget to settings
