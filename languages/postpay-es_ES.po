@@ -9,8 +9,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.3\n"
-"POT-Creation-Date: 2020-05-18T23:32:03+00:00\n"
-"PO-Revision-Date: 2020-05-18 23:32+0000\n"
+"POT-Creation-Date: 2020-05-18T23:45:50+00:00\n"
+"PO-Revision-Date: 2020-05-18 23:47+0000\n"
 "X-Domain: postpay\n"
 "Last-Translator: admin <dani@postpay.io>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -56,17 +56,17 @@ msgstr "La captura con Postpay falló. ID: %1$s. Código: %2$s."
 msgid "Postpay capture error."
 msgstr "Postpay error de captura."
 
-#. translators: %1$s: transaction id %2$s: order status
+#. translators: %1$s: order status %2$s: transaction id
 #: includes/class-wc-postpay-gateway.php:171
-msgid "Postpay order cancelled. ID: %1$s. Status: %2$s."
-msgstr ""
+msgid "Postpay order %1$s. ID: %2$s."
+msgstr "Postpay pedido %1$s. ID: %2$s."
 
-#: includes/class-wc-postpay-gateway.php:178
+#: includes/class-wc-postpay-gateway.php:177
 msgid "Postpay order cancelled."
 msgstr "Postpay pedido cancelado."
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:202
+#: includes/class-wc-postpay-gateway.php:201
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
 msgstr "La devolución con Postpay falló. ID: %1$s. Código: %2$s."
 
