@@ -93,12 +93,12 @@ return array(
 		'default'     => 'yes',
 		'description' => __( 'Show a promotional message on cart page.', 'postpay' ),
 	),
-	'payment_method_widget' => array(
-		'title'       => __( 'Payment Method Widget', 'postpay' ),
+	'payment_summary_widget' => array(
+		'title'       => __( 'Payment summary widget', 'postpay' ),
 		'type'        => 'checkbox',
-		'label'       => __( 'Enable Payment Method Widget', 'postpay' ),
+		'label'       => __( 'Enable payment summary widget', 'postpay' ),
 		'default'     => 'yes',
-		'description' => __( 'Show the instalment plan info on payment method selection.', 'postpay' ),
+		'description' => __( 'Show the payment summary on the payment method selection.', 'postpay' ),
 	),
 	'css'                   => array(
 		'title'       => __( 'CSS selector', 'postpay' ),
