@@ -69,7 +69,7 @@ return array(
 		'title'       => __( 'In-Context Checkout', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable In-Context Checkout', 'postpay' ),
-		'default'     => 'no',
+		'default'     => 'yes',
 		'description' => __( 'Checkout flow that keeps customers local to your website.', 'postpay' ),
 	),
 	'debug'                 => array(

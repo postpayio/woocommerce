@@ -38,7 +38,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 		$this->theme       = $this->get_option( 'theme' );
 		$this->token_param = $this->id . '-token';
 		$this->sandbox     = 'yes' === $this->get_option( 'sandbox', 'yes' );
-		$this->in_context  = 'yes' === $this->get_option( 'in_context', 'no' );
+		$this->in_context  = 'yes' === $this->get_option( 'in_context', 'yes' );
 		$this->debug       = 'yes' === $this->get_option( 'debug', 'no' );
 		$this->widget      = 'yes' === $this->get_option( 'payment_summary_widget', 'yes' );
 		$this->css         = $this->get_option( 'css', '#payment ul li.payment_method_' . $this->id );
