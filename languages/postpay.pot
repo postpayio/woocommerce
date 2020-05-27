@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-05-18T23:45:50+00:00\n"
+"POT-Creation-Date: 2020-05-27T07:04:33+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: postpay\n"
@@ -23,13 +23,12 @@ msgid "https://github.com/postpayio/woocommerce"
 msgstr ""
 
 #. Description of the plugin
-#: includes/class-wc-postpay-gateway.php:29
-#: includes/wc-postpay-settings.php:27
+#: includes/gateways/class-wc-postpay-split-payment.php:19
+#: includes/settings/postpay-split-payment.php:27
 msgid "Buy now and pay later with zero interest and zero fees."
 msgstr ""
 
 #. Author of the plugin
-#: includes/class-wc-postpay-gateway.php:28
 msgid "Postpay"
 msgstr ""
 
@@ -41,185 +40,242 @@ msgstr ""
 msgid "Invalid URL."
 msgstr ""
 
-#: includes/class-wc-postpay-gateway.php:30
-msgid "Proceed to Postpay"
-msgstr ""
-
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:146
+#: includes/gateways/class-wc-postpay-gateway.php:144
 msgid "Postpay capture failed. ID: %1$s. Code: %2$s."
 msgstr ""
 
-#: includes/class-wc-postpay-gateway.php:155
+#: includes/gateways/class-wc-postpay-gateway.php:153
 msgid "Postpay capture error."
 msgstr ""
 
 #. translators: %1$s: order status %2$s: transaction id
-#: includes/class-wc-postpay-gateway.php:171
+#: includes/gateways/class-wc-postpay-gateway.php:172
 msgid "Postpay order %1$s. ID: %2$s."
 msgstr ""
 
-#: includes/class-wc-postpay-gateway.php:177
+#: includes/gateways/class-wc-postpay-gateway.php:179
 msgid "Postpay order cancelled."
 msgstr ""
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/class-wc-postpay-gateway.php:201
+#: includes/gateways/class-wc-postpay-gateway.php:203
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
+msgstr ""
+
+#: includes/gateways/class-wc-postpay-pay-now.php:25
+msgid "Postpay Pay Now"
+msgstr ""
+
+#: includes/gateways/class-wc-postpay-pay-now.php:26
+msgid "Accept payments using credit and debit cards."
+msgstr ""
+
+#: includes/gateways/class-wc-postpay-pay-now.php:27
+msgid "Pay Now"
+msgstr ""
+
+#: includes/gateways/class-wc-postpay-split-payment.php:18
+msgid "Postpay Split Payment"
+msgstr ""
+
+#: includes/gateways/class-wc-postpay-split-payment.php:20
+msgid "Proceed to Postpay"
 msgstr ""
 
 #: includes/http/class-wc-postpay-adapter.php:66
 msgid "Postpay is not properly configured."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:10
+#: includes/settings/postpay-pay-now.php:10
+#: includes/settings/postpay-split-payment.php:10
 msgid "Enable/Disable"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:12
-msgid "Enable Postpay"
+#: includes/settings/postpay-pay-now.php:12
+msgid "Enable Pay Now"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:16
+#: includes/settings/postpay-pay-now.php:16
+#: includes/settings/postpay-split-payment.php:16
 msgid "Title"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:18
+#: includes/settings/postpay-pay-now.php:18
+#: includes/settings/postpay-split-payment.php:18
 msgid "This controls the title which the user sees during checkout."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:19
-msgid "Instalments with Postpay"
+#: includes/settings/postpay-pay-now.php:19
+msgid "Credit or Debit Card"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:23
+#: includes/settings/postpay-pay-now.php:23
+#: includes/settings/postpay-split-payment.php:23
 msgid "Description"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:26
+#: includes/settings/postpay-pay-now.php:26
+#: includes/settings/postpay-split-payment.php:26
 msgid "This controls the description which the user sees during checkout."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:30
-msgid "Theme"
+#: includes/settings/postpay-pay-now.php:27
+msgid "Secure checkout with your Credit or Debit card."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:33
-msgid "This controls the color to coordinate and contrast with different backgrounds."
-msgstr ""
-
-#: includes/wc-postpay-settings.php:36
-msgid "Light"
-msgstr ""
-
-#: includes/wc-postpay-settings.php:37
-msgid "Dark"
-msgstr ""
-
-#: includes/wc-postpay-settings.php:41
+#: includes/settings/postpay-pay-now.php:30
+#: includes/settings/postpay-split-payment.php:30
 msgid "Merchant ID"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:43
+#: includes/settings/postpay-pay-now.php:32
+#: includes/settings/postpay-split-payment.php:32
 msgid "Get your merchant ID from Postpay."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:48
+#: includes/settings/postpay-pay-now.php:37
+#: includes/settings/postpay-split-payment.php:37
 msgid "Secret key"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:50
+#: includes/settings/postpay-pay-now.php:39
+#: includes/settings/postpay-split-payment.php:39
 msgid "Get your secret Key from Postpay."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:55
+#: includes/settings/postpay-pay-now.php:44
+#: includes/settings/postpay-split-payment.php:44
 msgid "Sandbox secret key"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:57
+#: includes/settings/postpay-pay-now.php:46
+#: includes/settings/postpay-split-payment.php:46
 msgid "Get your sandbox secret key from Postpay."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:62
+#: includes/settings/postpay-pay-now.php:51
+#: includes/settings/postpay-split-payment.php:51
 msgid "Postpay sandbox"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:64
+#: includes/settings/postpay-pay-now.php:53
+#: includes/settings/postpay-split-payment.php:53
 msgid "Enable Postpay sandbox"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:66
+#: includes/settings/postpay-pay-now.php:55
+#: includes/settings/postpay-split-payment.php:55
 msgid "Postpay sandbox can be used to test payments."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:69
+#: includes/settings/postpay-pay-now.php:58
+#: includes/settings/postpay-split-payment.php:58
 msgid "In-context checkout"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:71
+#: includes/settings/postpay-pay-now.php:60
+#: includes/settings/postpay-split-payment.php:60
 msgid "Enable in-context checkout"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:73
+#: includes/settings/postpay-pay-now.php:62
+#: includes/settings/postpay-split-payment.php:62
 msgid "Checkout flow that keeps customers local to your website."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:76
+#: includes/settings/postpay-pay-now.php:65
+#: includes/settings/postpay-split-payment.php:65
 msgid "Debug log"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:78
+#: includes/settings/postpay-pay-now.php:67
+#: includes/settings/postpay-split-payment.php:67
 msgid "Enable logging"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:80
+#: includes/settings/postpay-pay-now.php:69
+#: includes/settings/postpay-split-payment.php:69
 msgid "Log Postpay events, such as HTTP requests."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:83
-msgid "Product widget"
+#: includes/settings/postpay-pay-now.php:72
+#: includes/settings/postpay-split-payment.php:72
+msgid "Theme"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:85
-msgid "Enable product widget"
+#: includes/settings/postpay-pay-now.php:75
+#: includes/settings/postpay-split-payment.php:75
+msgid "This controls the color to coordinate and contrast with different backgrounds."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:87
-msgid "Show a promotional message on product pages."
+#: includes/settings/postpay-pay-now.php:78
+#: includes/settings/postpay-split-payment.php:78
+msgid "Light"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:90
-msgid "Cart widget"
+#: includes/settings/postpay-pay-now.php:79
+#: includes/settings/postpay-split-payment.php:79
+msgid "Dark"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:92
-msgid "Enable cart widget"
-msgstr ""
-
-#: includes/wc-postpay-settings.php:94
-msgid "Show a promotional message on cart page."
-msgstr ""
-
-#: includes/wc-postpay-settings.php:97
+#: includes/settings/postpay-pay-now.php:83
+#: includes/settings/postpay-split-payment.php:97
 msgid "Payment summary widget"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:99
+#: includes/settings/postpay-pay-now.php:85
+#: includes/settings/postpay-split-payment.php:99
 msgid "Enable payment summary widget"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:101
+#: includes/settings/postpay-pay-now.php:87
+#: includes/settings/postpay-split-payment.php:101
 msgid "Show the payment summary on the payment method selection."
 msgstr ""
 
-#: includes/wc-postpay-settings.php:104
+#: includes/settings/postpay-pay-now.php:90
+#: includes/settings/postpay-split-payment.php:104
 msgid "CSS selector"
 msgstr ""
 
-#: includes/wc-postpay-settings.php:106
+#: includes/settings/postpay-pay-now.php:92
+#: includes/settings/postpay-split-payment.php:106
 msgid "Selector to hide the payment method if it is not available."
 msgstr ""
 
-#: postpay.php:111
+#: includes/settings/postpay-split-payment.php:12
+msgid "Enable Split Payment"
+msgstr ""
+
+#: includes/settings/postpay-split-payment.php:19
+msgid "Instalments with Postpay"
+msgstr ""
+
+#: includes/settings/postpay-split-payment.php:83
+msgid "Product widget"
+msgstr ""
+
+#: includes/settings/postpay-split-payment.php:85
+msgid "Enable product widget"
+msgstr ""
+
+#: includes/settings/postpay-split-payment.php:87
+msgid "Show a promotional message on product pages."
+msgstr ""
+
+#: includes/settings/postpay-split-payment.php:90
+msgid "Cart widget"
+msgstr ""
+
+#: includes/settings/postpay-split-payment.php:92
+msgid "Enable cart widget"
+msgstr ""
+
+#: includes/settings/postpay-split-payment.php:94
+msgid "Show a promotional message on cart page."
+msgstr ""
+
+#: postpay.php:114
 msgid "Settings"
 msgstr ""

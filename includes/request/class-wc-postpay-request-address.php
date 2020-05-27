@@ -6,7 +6,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Address request Class.
+ * Address request class.
  */
 class WC_Postpay_Request_Address {
 

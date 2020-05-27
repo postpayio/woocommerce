@@ -6,7 +6,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Guest request Class.
+ * Guest request class.
  */
 class WC_Postpay_Request_Guest {
 

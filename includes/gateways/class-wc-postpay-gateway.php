@@ -8,9 +8,9 @@ defined( 'ABSPATH' ) || exit;
 use Postpay\Exceptions\ApiException;
 
 /**
- * Postpay gateway Class.
+ * Postpay gateway abstract class.
  */
-class WC_Postpay_Gateway extends WC_Payment_Gateway {
+abstract class WC_Postpay_Gateway extends WC_Payment_Gateway {
 
 	/**
 	 * Postpay adapter instance.
@@ -20,29 +20,31 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	protected $adapter;
 
 	/**
+	 * Number of instalments.
+	 *
+	 * @var int
+	 */
+	const NUM_INSTALMENTS = null;
+
+	/**
 	 * Constructor.
 	 */
 	public function __construct() {
-		$this->id                 = WC_Postpay::PAYMENT_GATEWAY_ID;
-		$this->has_fields         = true;
-		$this->method_title       = __( 'Postpay', 'postpay' );
-		$this->method_description = __( 'Buy now and pay later with zero interest and zero fees.', 'postpay' );
-		$this->order_button_text  = __( 'Proceed to Postpay', 'postpay' );
-		$this->supports           = array( 'products', 'refunds' );
+		$this->has_fields = true;
+		$this->supports   = array( 'products', 'refunds' );
 
 		$this->init_form_fields();
 		$this->init_settings();
 
 		$this->title       = $this->get_option( 'title' );
 		$this->description = $this->get_option( 'description' );
-		$this->theme       = $this->get_option( 'theme' );
-		$this->token_param = $this->id . '-token';
+		$this->theme       = $this->get_option( 'theme', 'light' );
 		$this->sandbox     = 'yes' === $this->get_option( 'sandbox', 'yes' );
 		$this->in_context  = 'yes' === $this->get_option( 'in_context', 'yes' );
 		$this->debug       = 'yes' === $this->get_option( 'debug', 'no' );
-		$this->widget      = 'yes' === $this->get_option( 'payment_summary_widget', 'yes' );
 		$this->css         = $this->get_option( 'css', '#payment ul li.payment_method_' . $this->id );
-		$this->icon        = WC_POSTPAY_DIR_URL . 'assets/images/logo-' . $this->get_option( 'theme' ) . '.png';
+		$this->widget      = 'yes' === $this->get_option( str_replace( '-', '_', $this->id ) . '_widget', 'yes' );
+		$this->token_param = $this->id . '-token';
 
 		require_once WC_POSTPAY_DIR_PATH . 'includes/class-wc-postpay-api.php';
 
@@ -70,13 +72,6 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	}
 
 	/**
-	 * Initialise settings form fields.
-	 */
-	public function init_form_fields() {
-		$this->form_fields = include 'wc-postpay-settings.php';
-	}
-
-	/**
 	 * Get secret key.
 	 *
 	 * @return string
@@ -89,6 +84,9 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	 * Build the payment fields area.
 	 */
 	public function payment_fields() {
+		if ( WC_Postpay::PAYMENT_GATEWAY_ID !== $this->id ) {
+			wc_postpay_script( 'wc-postpay-js' );
+		}
 		wc_get_postpay_template( 'payment-fields.php', array( 'gateway' => $this ) );
 	}
 
@@ -127,7 +125,7 @@ class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	}
 
 	/**
-	 * Capture an order after redirect.
+	 * Capture an approved order.
 	 *
 	 * @param string $transaction_id Transaction id.
 	 * @param string $order_key      Order key.

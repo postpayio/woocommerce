@@ -6,7 +6,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Shipping request Class.
+ * Shipping request class.
  */
 class WC_Postpay_Request_Shipping {
 

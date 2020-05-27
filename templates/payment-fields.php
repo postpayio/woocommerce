@@ -14,6 +14,14 @@ defined( 'ABSPATH' ) || exit;
 		data-currency="<?php echo get_woocommerce_currency(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
 		data-country="<?php echo WC()->customer->get_shipping_country(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
 		data-hide-if-invalid="<?php echo $gateway->css; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
+		<?php if ( WC_Postpay::PAYMENT_GATEWAY_ID !== $gateway->id ) : ?>
+		data-merchant-id="<?php echo $gateway->get_option( 'merchant_id' ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
+		data-sandbox="<?php echo $gateway->sandbox; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
+		data-theme="<?php echo $gateway->theme; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
+		<?php endif; ?>
+		<?php if ( null !== $gateway::NUM_INSTALMENTS ) : ?>
+		data-num-instalments="<?php echo $gateway::NUM_INSTALMENTS; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
+		<?php endif; ?>
 	></div>
 
 	<script>

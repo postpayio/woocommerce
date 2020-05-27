@@ -6,7 +6,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Coupon request Class.
+ * Coupon request class.
  */
 class WC_Postpay_Request_Coupon {
 

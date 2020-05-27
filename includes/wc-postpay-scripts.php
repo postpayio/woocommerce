@@ -1,6 +1,6 @@
 <?php
 /**
- * Scripts for Postpay Gateway
+ * Postpay scripts
  */
 
 defined( 'ABSPATH' ) || exit;

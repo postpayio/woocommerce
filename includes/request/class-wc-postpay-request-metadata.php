@@ -6,16 +6,18 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Metadata request Class.
+ * Metadata request class.
  */
 class WC_Postpay_Request_Metadata {
 
 	/**
 	 * Build request.
 	 *
+	 * @param WC_Postpay_Gateway $gateway Postpay gateway instance.
+	 *
 	 * @return array
 	 */
-	public static function build() {
+	public static function build( $gateway ) {
 		global $wp_version;
 
 		return array(
@@ -33,6 +35,12 @@ class WC_Postpay_Request_Metadata {
 			'module'   => array(
 				'package' => 'postpay/woocommerce',
 				'version' => WC_POSTPAY_VERSION,
+			),
+			'settings' => array(
+				'in_context' => $gateway->in_context,
+				'debug'      => $gateway->debug,
+				'theme'      => $gateway->theme,
+				'css'        => $gateway->css,
 			),
 		);
 	}

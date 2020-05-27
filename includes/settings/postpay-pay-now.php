@@ -1,6 +1,6 @@
 <?php
 /**
- * Settings for Postpay Gateway
+ * Postpay pay now settings
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -9,14 +9,14 @@ return array(
 	'enabled'                => array(
 		'title'   => __( 'Enable/Disable', 'postpay' ),
 		'type'    => 'checkbox',
-		'label'   => __( 'Enable Postpay', 'postpay' ),
+		'label'   => __( 'Enable Pay Now', 'postpay' ),
 		'default' => 'yes',
 	),
 	'title'                  => array(
 		'title'       => __( 'Title', 'postpay' ),
 		'type'        => 'text',
 		'description' => __( 'This controls the title which the user sees during checkout.', 'postpay' ),
-		'default'     => __( 'Instalments with Postpay', 'postpay' ),
+		'default'     => __( 'Credit or Debit Card', 'postpay' ),
 		'desc_tip'    => true,
 	),
 	'description'            => array(
@@ -24,18 +24,7 @@ return array(
 		'type'        => 'text',
 		'desc_tip'    => true,
 		'description' => __( 'This controls the description which the user sees during checkout.', 'postpay' ),
-		'default'     => __( 'Buy now and pay later with zero interest and zero fees.', 'postpay' ),
-	),
-	'theme'                  => array(
-		'title'       => __( 'Theme', 'postpay' ),
-		'type'        => 'select',
-		'desc_tip'    => true,
-		'description' => __( 'This controls the color to coordinate and contrast with different backgrounds.', 'postpay' ),
-		'default'     => 'light',
-		'options'     => array(
-			'light' => __( 'Light', 'postpay' ),
-			'dark'  => __( 'Dark', 'postpay' ),
-		),
+		'default'     => __( 'Secure checkout with your Credit or Debit card.', 'postpay' ),
 	),
 	'merchant_id'            => array(
 		'title'       => __( 'Merchant ID', 'postpay' ),
@@ -79,21 +68,18 @@ return array(
 		'default'     => 'no',
 		'description' => __( 'Log Postpay events, such as HTTP requests.', 'postpay' ),
 	),
-	'product_widget'         => array(
-		'title'       => __( 'Product widget', 'postpay' ),
-		'type'        => 'checkbox',
-		'label'       => __( 'Enable product widget', 'postpay' ),
-		'default'     => 'yes',
-		'description' => __( 'Show a promotional message on product pages.', 'postpay' ),
+	'theme'                  => array(
+		'title'       => __( 'Theme', 'postpay' ),
+		'type'        => 'select',
+		'desc_tip'    => true,
+		'description' => __( 'This controls the color to coordinate and contrast with different backgrounds.', 'postpay' ),
+		'default'     => 'light',
+		'options'     => array(
+			'light' => __( 'Light', 'postpay' ),
+			'dark'  => __( 'Dark', 'postpay' ),
+		),
 	),
-	'cart_widget'            => array(
-		'title'       => __( 'Cart widget', 'postpay' ),
-		'type'        => 'checkbox',
-		'label'       => __( 'Enable cart widget', 'postpay' ),
-		'default'     => 'yes',
-		'description' => __( 'Show a promotional message on cart page.', 'postpay' ),
-	),
-	'payment_summary_widget' => array(
+	'postpay_pay_now_widget' => array(
 		'title'       => __( 'Payment summary widget', 'postpay' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable payment summary widget', 'postpay' ),

@@ -11,7 +11,7 @@ use Postpay\Http\Response;
 use Postpay\HttpClients\ClientInterface;
 
 /**
- * Postpay HTTP client Class.
+ * Postpay HTTP client class.
  */
 class WC_Postpay_Client implements ClientInterface {
 

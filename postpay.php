@@ -24,7 +24,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Postpay main Class.
+ * Postpay main class.
  */
 class WC_Postpay {
 
@@ -71,7 +71,7 @@ class WC_Postpay {
 		require_once WC_POSTPAY_DIR_PATH . 'includes/http/class-wc-postpay-adapter.php';
 
 		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'plugin_action_links' ) );
-		add_filter( 'woocommerce_payment_gateways', array( __CLASS__, 'add_gateway' ) );
+		add_filter( 'woocommerce_payment_gateways', array( __CLASS__, 'load_gateways' ) );
 
 		load_plugin_textdomain( 'postpay', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
@@ -87,13 +87,16 @@ class WC_Postpay {
 	 *
 	 * @return array
 	 */
-	public static function add_gateway( $methods ) {
+	public static function load_gateways( $methods ) {
 		if ( ! class_exists( 'WC_Payment_Gateway' ) ) {
 			return;
 		}
-		include_once dirname( __FILE__ ) . '/includes/class-wc-postpay-gateway.php';
-		$methods[] = 'WC_Postpay_Gateway';
 
+		include_once WC_POSTPAY_DIR_PATH . 'includes/gateways/class-wc-postpay-gateway.php';
+		include_once WC_POSTPAY_DIR_PATH . 'includes/gateways/class-wc-postpay-pay-now.php';
+		include_once WC_POSTPAY_DIR_PATH . 'includes/gateways/class-wc-postpay-split-payment.php';
+
+		array_push( $methods, 'WC_Postpay_Pay_Now', 'WC_Postpay_Split_Payment' );
 		return $methods;
 	}
 

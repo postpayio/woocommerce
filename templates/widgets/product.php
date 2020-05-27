@@ -7,7 +7,7 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 
-$price = wc_get_price_including_tax( $product );
+$price = wc_get_price_to_display( $product, array( 'price' => $product->get_sale_price() ) );
 ?>
 
 <div

@@ -6,18 +6,19 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Checkout request Class.
+ * Checkout request class.
  */
 class WC_Postpay_Request_Checkout {
 
 	/**
 	 * Build request.
 	 *
-	 * @param string $order_id Order id.
+	 * @param string             $order_id Order id.
+	 * @param WC_Postpay_Gateway $gateway  Postpay gateway instance.
 	 *
 	 * @return array
 	 */
-	public static function build( $order_id ) {
+	public static function build( $order_id, $gateway ) {
 
 		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-address.php';
 		require_once WC_POSTPAY_DIR_PATH . 'includes/request/class-wc-postpay-request-coupon.php';
@@ -47,10 +48,11 @@ class WC_Postpay_Request_Checkout {
 				array_values( $order->get_items( 'coupon' ) )
 			),
 			'merchant'        => array(
-				'confirmation_url' => self::get_url( 'capture', $order->get_order_key() ),
-				'cancel_url'       => self::get_url( 'cancel', $order->get_order_key() ),
+				'confirmation_url' => self::get_url( 'capture', $order->get_order_key(), $gateway->id ),
+				'cancel_url'       => self::get_url( 'cancel', $order->get_order_key(), $gateway->id ),
 			),
-			'metadata'        => WC_Postpay_Request_Metadata::build(),
+			'metadata'        => WC_Postpay_Request_Metadata::build( $gateway ),
+			'num_instalments' => $gateway::NUM_INSTALMENTS,
 		);
 
 		if ( is_user_logged_in() ) {
@@ -69,18 +71,19 @@ class WC_Postpay_Request_Checkout {
 	/**
 	 * Create Api URL.
 	 *
-	 * @param string $action    Action to perform.
-	 * @param string $order_key Order key.
+	 * @param string $action     Action to perform.
+	 * @param string $order_key  Order key.
+	 * @param string $gateway_id Postpay gateway id.
 	 *
 	 * @return string
 	 */
-	public static function get_url( $action, $order_key ) {
+	public static function get_url( $action, $order_key, $gateway_id ) {
 		return add_query_arg(
 			array(
 				'action'    => $action,
 				'order_key' => $order_key,
 			),
-			WC()->api_request_url( WC_Postpay::PAYMENT_GATEWAY_ID )
+			WC()->api_request_url( $gateway_id )
 		);
 	}
 }

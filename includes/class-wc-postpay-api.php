@@ -6,7 +6,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Postpay Api dispatcher Class.
+ * Postpay Api dispatcher class.
  */
 class WC_Postpay_Api {
 
