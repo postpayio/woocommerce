@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0
+
+* Added Pay Now payment gateway
+* Improved unit price on product widget
+
 ## 0.1.11
 
 * Removed checkout cancelled notes
