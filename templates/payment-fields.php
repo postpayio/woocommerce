@@ -6,7 +6,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php if ( $gateway->widget ) : ?>
+<?php if ( $gateway->widget && ! isset( $_GET['pay_for_order'] ) ) : ?>
 	<div
 		class="postpay-widget"
 		data-type="payment-summary"
