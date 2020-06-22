@@ -13,6 +13,7 @@ defined( 'ABSPATH' ) || exit;
 		data-amount="<?php echo WC_Postpay_Adapter::decimal( WC()->cart->total )->jsonSerialize(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
 		data-currency="<?php echo get_woocommerce_currency(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
 		data-country="<?php echo WC()->customer->get_billing_country(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
+		data-locale="<?php echo get_locale(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
 		data-hide-if-invalid="<?php echo $gateway->css; // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
 		<?php if ( WC_Postpay::PAYMENT_GATEWAY_ID !== $gateway->id ) : ?>
 		data-merchant-id="<?php echo $gateway->get_option( 'merchant_id' ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>"
