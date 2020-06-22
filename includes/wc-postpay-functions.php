@@ -6,6 +6,17 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Get Postpay template.
+ *
+ * @param string $template_name Template name.
+ * @param array  $args          Arguments. (default: array).
+ * @param string $template_path Template path. (default: '').
+ */
+function wc_get_postpay_template( $template_name, $args = array(), $template_path = '' ) {
+	wc_get_template( $template_name, $args, $template_path, WC_POSTPAY_DIR_PATH . 'templates/' );
+}
+
+/**
  * Register the script and inject parameters.
  *
  * @param string     $handle Script handle the data will be attached to.
@@ -22,12 +33,19 @@ function wc_postpay_script( $handle, $params = null ) {
 }
 
 /**
- * Get Postpay template.
+ * Register and load postpay-js script.
  *
- * @param string $template_name Template name.
- * @param array  $args          Arguments. (default: array).
- * @param string $template_path Template path. (default: '').
+ * @param array $settings Gateway settings.
  */
-function wc_get_postpay_template( $template_name, $args = array(), $template_path = '' ) {
-	wc_get_template( $template_name, $args, $template_path, WC_POSTPAY_DIR_PATH . 'templates/' );
+function wc_postpay_js( $settings ) {
+	wc_postpay_script( 'wc-postpay-js' );
+
+	wc_postpay_script(
+		'wc-postpay-init',
+		array(
+			'sandbox'    => 'yes' === $settings['sandbox'],
+			'merchantId' => $settings['merchant_id'],
+			'theme'      => $settings['theme'] ?? 'light',
+		)
+	);
 }

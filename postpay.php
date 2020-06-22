@@ -122,16 +122,7 @@ class WC_Postpay {
 	 */
 	public function load_scripts() {
 		if ( $this->enabled ) {
-			wc_postpay_script( 'wc-postpay-js' );
-
-			wc_postpay_script(
-				'wc-postpay-init',
-				array(
-					'sandbox'    => 'yes' === $this->settings['sandbox'],
-					'merchantId' => $this->settings['merchant_id'],
-					'theme'      => $this->settings['theme'] ?? 'light',
-				)
-			);
+			wc_postpay_js( $this->settings );
 		}
 	}
 
