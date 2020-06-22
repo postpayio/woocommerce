@@ -2,15 +2,15 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Postpay Payment Gateway 0.2.0\n"
+"Project-Id-Version: WooCommerce Postpay Payment Gateway 0.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/postpay\n"
 "Language-Team: Spanish (Spain)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.3\n"
-"POT-Creation-Date: 2020-05-27T07:04:33+00:00\n"
-"PO-Revision-Date: 2020-05-27 07:07+0000\n"
+"POT-Creation-Date: 2020-06-22T08:48:35+00:00\n"
+"PO-Revision-Date: 2020-06-22 08:50+0000\n"
 "X-Domain: postpay\n"
 "Last-Translator: admin <dani@postpay.io>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -44,25 +44,25 @@ msgid "Invalid URL."
 msgstr "URL inválida."
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/gateways/class-wc-postpay-gateway.php:144
+#: includes/gateways/class-wc-postpay-gateway.php:142
 msgid "Postpay capture failed. ID: %1$s. Code: %2$s."
 msgstr "La captura con Postpay falló. ID: %1$s. Código: %2$s."
 
-#: includes/gateways/class-wc-postpay-gateway.php:153
+#: includes/gateways/class-wc-postpay-gateway.php:151
 msgid "Postpay capture error."
 msgstr "Postpay error de captura."
 
 #. translators: %1$s: order status %2$s: transaction id
-#: includes/gateways/class-wc-postpay-gateway.php:172
+#: includes/gateways/class-wc-postpay-gateway.php:170
 msgid "Postpay order %1$s. ID: %2$s."
 msgstr "Postpay pedido %1$s. ID: %2$s."
 
-#: includes/gateways/class-wc-postpay-gateway.php:179
+#: includes/gateways/class-wc-postpay-gateway.php:177
 msgid "Postpay order cancelled."
 msgstr "Postpay pedido cancelado."
 
 #. translators: %1$s: transaction id %2$s: error code
-#: includes/gateways/class-wc-postpay-gateway.php:203
+#: includes/gateways/class-wc-postpay-gateway.php:201
 msgid "Postpay refund failed. ID: %1$s. Code: %2$s."
 msgstr "La devolución con Postpay falló. ID: %1$s. Código: %2$s."
 
