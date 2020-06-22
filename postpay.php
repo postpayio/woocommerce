@@ -121,7 +121,7 @@ class WC_Postpay {
 	 * Register/queue frontend scripts.
 	 */
 	public function load_scripts() {
-		if ( $this->enabled ) {
+		if ( $this->enabled && ! is_checkout() ) {
 			wc_postpay_js( $this->settings );
 		}
 	}

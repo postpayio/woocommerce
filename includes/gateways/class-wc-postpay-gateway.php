@@ -84,9 +84,7 @@ abstract class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	 * Build the payment fields area.
 	 */
 	public function payment_fields() {
-		if ( WC_Postpay::PAYMENT_GATEWAY_ID !== $this->id ) {
-			wc_postpay_script( 'wc-postpay-js' );
-		}
+		wc_postpay_script( 'wc-postpay-js' );
 		wc_get_postpay_template( 'payment-fields.php', array( 'gateway' => $this ) );
 	}
 
@@ -216,6 +214,8 @@ abstract class WC_Postpay_Gateway extends WC_Payment_Gateway {
 	 */
 	public function load_scripts() {
 		if ( $this->is_available() && is_checkout() && ! empty( $_GET[ $this->token_param ] ) ) {
+			wc_postpay_js( $this->settings );
+
 			wc_postpay_script(
 				'wc-postpay-checkout',
 				array( 'token' => wc_clean( wp_unslash( $_GET[ $this->token_param ] ) ) )
