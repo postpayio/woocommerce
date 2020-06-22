@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+
+* Improved checkout widgets settings
+* Added widgets locale attribute
+
 ## 0.2.0
 
 * Added Pay Now payment gateway
