@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+* Added locale to postpay init
+
 ## 0.2.1
 
 * Improved checkout widgets settings

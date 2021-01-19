@@ -3,7 +3,7 @@ Contributors: mongkok
 Requires at least: 4.4
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 0.2.1
+Stable tag: 0.2.2
 Version: 0.2.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -71,6 +71,9 @@ We agree that your security is of utmost importance. We are a PCI DSS compliant 
 4. Instalment plan approved.
 
 == Changelog ==
+
+= 0.2.2 - 2021-01-19 =
+* Added locale to postpay init
 
 = 0.2.1 - 2020-06-22 =
 * Improved checkout widgets settings
