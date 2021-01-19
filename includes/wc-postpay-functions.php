@@ -46,6 +46,7 @@ function wc_postpay_js( $settings ) {
 			'sandbox'    => 'yes' === $settings['sandbox'],
 			'merchantId' => $settings['merchant_id'],
 			'theme'      => $settings['theme'] ?? 'light',
+			'locale'     => get_locale(),
 		)
 	);
 }
