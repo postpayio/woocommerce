@@ -19,7 +19,7 @@
     "require": {
         "php": ">=5.6|>=7.0",
         "composer/installers": "~1.0",
-        "postpay/postpay-php": "~0.0.4"
+        "postpay/postpay-php": "~0.1.1"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "~3.5.3",
