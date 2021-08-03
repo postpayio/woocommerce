@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3
+
+* Updated postpay-php
+
 ## 0.2.2
 
 * Added locale to postpay init

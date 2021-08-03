@@ -3,8 +3,8 @@ Contributors: mongkok
 Requires at least: 4.4
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 0.2.2
-Version: 0.2.1
+Stable tag: 0.2.3
+Version: 0.2.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: wordpress,woocommerce,payment,gateway,postpay
@@ -71,6 +71,9 @@ We agree that your security is of utmost importance. We are a PCI DSS compliant 
 4. Instalment plan approved.
 
 == Changelog ==
+
+= 0.2.3 - 2021-08-03 =
+* Updated postpay-php
 
 = 0.2.2 - 2021-01-19 =
 * Added locale to postpay init
