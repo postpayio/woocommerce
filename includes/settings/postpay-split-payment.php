@@ -86,6 +86,13 @@ return array(
 		'default'     => 'yes',
 		'description' => __( 'Show a promotional message on product pages.', 'postpay' ),
 	),
+	'one_product_widget' => array(
+		'title'       => __( 'Product ONE widget', 'postpay' ),
+		'type'        => 'checkbox',
+		'label'       => __( 'Enable express checkout widget on the product page', 'postpay' ),
+		'default'     => 'yes',
+		'description' => __( 'Show Postpay ONE widget on the product page.', 'postpay' ),
+	),
 	'cart_widget'        => array(
 		'title'       => __( 'Cart widget', 'postpay' ),
 		'type'        => 'checkbox',

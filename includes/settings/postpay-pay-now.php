@@ -79,6 +79,13 @@ return array(
 			'dark'  => __( 'Dark', 'postpay' ),
 		),
 	),
+	'one_product_widget'     => array(
+		'title'       => __( 'Product ONE widget', 'postpay' ),
+		'type'        => 'checkbox',
+		'label'       => __( 'Enable express checkout widget on the product page', 'postpay' ),
+		'default'     => 'yes',
+		'description' => __( 'Show Postpay ONE widget on the product page.', 'postpay' ),
+	),
 	'postpay_pay_now_widget' => array(
 		'title'       => __( 'Payment summary widget', 'postpay' ),
 		'type'        => 'checkbox',

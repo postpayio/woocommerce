@@ -48,7 +48,7 @@ abstract class WC_Postpay_Gateway extends WC_Payment_Gateway {
 
 		require_once WC_POSTPAY_DIR_PATH . 'includes/class-wc-postpay-api.php';
 
-		new WC_Postpay_Api( $this->id );
+		new WC_Postpay_Api( $this );
 		$this->adapter = new WC_Postpay_Adapter( $this );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ) );
@@ -56,6 +56,19 @@ abstract class WC_Postpay_Gateway extends WC_Payment_Gateway {
 
 		add_action( 'api_' . $this->id . '_capture', array( $this, 'capture' ), 10, 2 );
 		add_action( 'api_' . $this->id . '_cancel', array( $this, 'cancel' ), 10, 2 );
+	}
+
+	public function dispatch( $tag ) {
+		if ( ! empty( $_GET['order_id'] ) && ! empty( $_GET['order_key'] ) ) {
+			do_action(
+				$tag,
+				wc_clean( wp_unslash( $_GET['order_id'] ) ),
+				wc_clean( wp_unslash( $_GET['order_key'] ) )
+			);
+			exit;
+		}
+
+		wp_die( esc_html__( 'Invalid URL.', 'postpay' ) );
 	}
 
 	/**
@@ -111,7 +124,7 @@ abstract class WC_Postpay_Gateway extends WC_Payment_Gateway {
 			if ( $this->sandbox ) {
 				$host = 'checkout-sandbox.postpay.io';
 			} else {
-				$host = 'checkout.postpay.io';
+				$host = 'checkout-dev.postpay.io';
 			}
 			$redirect_url = "https://$host/$response[token]";
 		}
@@ -239,5 +252,17 @@ abstract class WC_Postpay_Gateway extends WC_Payment_Gateway {
 			return $order;
 		}
 		return false;
+	}
+
+	/**
+	 * Create Api URL.
+	 *
+	 * @param string $action Action to perform.
+	 * @param string $order  Order.
+	 *
+	 * @return string
+	 */
+	public function get_url( $action, $order ) {
+		return WC_Postpay_Api::get_url( $action, $this->id, array( 'order_key' => $order->get_order_key() ) );
 	}
 }
