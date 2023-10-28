@@ -78,6 +78,15 @@ class WC_Postpay {
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ) );
 		add_action( 'woocommerce_single_product_summary', array( $this, 'product_widget' ), 20 );
 		add_action( 'woocommerce_after_cart_totals', array( $this, 'cart_widget' ), 20 );
+		add_action( 'init', array( $this, 'one' ) );
+	}
+
+	/**
+	 * Load Postpay ONE.
+	 */
+	public function one() {
+		require_once WC_POSTPAY_DIR_PATH . 'includes/gateways/class-wc-postpay-one.php';
+		new WC_Postpay_ONE();
 	}
 
 	/**

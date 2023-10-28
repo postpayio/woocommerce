@@ -48,8 +48,8 @@ class WC_Postpay_Request_Checkout {
 				array_values( $order->get_items( 'coupon' ) )
 			),
 			'merchant'        => array(
-				'confirmation_url' => self::get_url( 'capture', $order->get_order_key(), $gateway->id ),
-				'cancel_url'       => self::get_url( 'cancel', $order->get_order_key(), $gateway->id ),
+				'confirmation_url' => $gateway->get_url( 'capture', $order ),
+				'cancel_url'       => $gateway->get_url( 'cancel', $order ),
 			),
 			'metadata'        => WC_Postpay_Request_Metadata::build( $gateway ),
 			'num_instalments' => $gateway::NUM_INSTALMENTS,
@@ -66,24 +66,5 @@ class WC_Postpay_Request_Checkout {
 		}
 
 		return $data;
-	}
-
-	/**
-	 * Create Api URL.
-	 *
-	 * @param string $action     Action to perform.
-	 * @param string $order_key  Order key.
-	 * @param string $gateway_id Postpay gateway id.
-	 *
-	 * @return string
-	 */
-	public static function get_url( $action, $order_key, $gateway_id ) {
-		return add_query_arg(
-			array(
-				'action'    => $action,
-				'order_key' => $order_key,
-			),
-			WC()->api_request_url( $gateway_id )
-		);
 	}
 }
