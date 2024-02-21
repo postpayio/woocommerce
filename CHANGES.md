@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.4
+
+* Updated readme file
+* Updated Screenshots and images
+
 ## 0.2.3
 
 * Updated postpay-php

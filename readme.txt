@@ -3,8 +3,8 @@ Contributors: mongkok
 Requires at least: 4.4
 Tested up to: 6.4
 Requires PHP: 5.6
-Stable tag: 0.2.3
-Version: 0.2.3
+Stable tag: 0.2.4
+Version: 0.2.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: wordpress,woocommerce,payment,gateway,postpay
@@ -13,15 +13,42 @@ Buy now and pay later with zero interest and zero fees.
 
 == Description ==
 
-Postpay is a payment solution that allows customers to "buy now, pay later" seamlessly with absolutely zero interest and no fees.
+Postpay is a preferred provider for a buy now pay later solution in the UAE and Saudi Arabia.
 
-Select Postpay on checkout at one of our partner retailers and we split your total purchase into four equal instalments. The first instalment (25%) is processed immediately and the merchant ships your purchase to you as normal, so you can enjoy now and pay later.
+Global brands and small businesses choose Postpay to boost their growth and cultivate a loyal customer base through seamless and flexible online and in-store payment options.
 
-The remaining three instalments are due every two weeks thereafter. Absolutely no interest and zero fees are charged as-long-as all repayments are processed successfully on time. So in short, at the end of the six weeks you only pay for what you ordered!
+FOR MERCHANTS
 
-We benefit most when our customers complete instalments early and so if you want to pay off your instalments early, you can do so at absolutely no extra cost.
+*We are where your customers are. Online, in-store, and on your app. 
+*Postpay is partnered with thousands of merchants in the UAE and Saudi Arabia and with a network of over a million customers
+*Postpay engages with over a million customers, channeling them to our partners through diverse co-marketing campaigns.
+*Customers love the Postpay experience with a ~58% rate of returning customers.
+*Zero fraud and credit risk: Postpay takes full responsibility for 100% of payment risks on behalf of the merchant.
+*No Cash on Delivery (COD): If merchants choose to offer COD, we eliminate the associated challenges and offer a superior alternative.
+*Postpay is Shariah compliant and PCI DSS certified.
 
-For more information about Postpay please go to https://postpay.io.
+FOR CUSTOMERS
+
+*Buy now, pay later
+*Choose your way to pay later
+*Smooth, flexible payments
+*Online and in-store
+*Accepts Apple Pay
+*Accepts all major debit and credit cards
+
+INTEGRATION POSTPAY’S VALUE PROPOSITION
+
+Turn browsers into loyal shoppers by letting them know they can shop now and conveniently pay later with Postpay. Postpay’s widgets allow your customers to understand the benefits and flexibility of alternative payment methods, significantly impacting the conversion rate and potentially the order value.Place Postpay’s widgets across the online customer journey on product, cart, and checkout pages. 
+
+
+Postpay Widgets:
+*https://ui.postpay.io/widgets 
+
+TERMS AND CONDITIONS
+*https://www.postpay.io/terms-conditions
+
+PRIVACY POLICY
+*https://www.postpay.io/privacy-policy
 
 == Installation ==
 
@@ -51,10 +78,6 @@ The easiest way to sign up to Postpay is to select Postpay as your payment metho
 
 Your limit will change with regards to several key factors including but not limited to, the nature of the items you are purchasing, the retail merchant where you are purchasing these items and of course your history with Postpay. In short, the longer you have been purchasing using Postpay and successfully repaying on time, the higher your limit will be. We restrict the limits of new shoppers as we need to get to know you better. That being mentioned, we evaluate your repayment capability every time you use Postpay.
 
-= Is there any interest charged or fees for using postpay? =
-
-There is absolutely no interest and zero fees when using postpay.
-
 = Is this different from credit? =
 
 Postpay offers an interest-free and fees-free alternative to traditional credit that favors you, the customer. This means that you will have a seamless experience and not pay anything more for it!
@@ -71,6 +94,10 @@ We agree that your security is of utmost importance. We are a PCI DSS compliant 
 4. Instalment plan approved.
 
 == Changelog ==
+
+= 0.2.4 - 2021-02-21 =
+* Updated readme file
+* Updated Screenshots and images
 
 = 0.2.3 - 2021-08-03 =
 * Updated postpay-php
