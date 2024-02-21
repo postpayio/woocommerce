@@ -95,7 +95,7 @@ We agree that your security is of utmost importance. We are a PCI DSS compliant 
 
 == Changelog ==
 
-= 0.2.4 - 2021-02-21 =
+= 0.2.4 - 2024-02-21 =
 * Updated readme file
 * Updated Screenshots and images
 
